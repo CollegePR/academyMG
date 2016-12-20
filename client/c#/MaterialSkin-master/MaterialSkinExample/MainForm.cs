@@ -69,16 +69,6 @@ namespace MaterialSkinExample
 	        }
         }
 
-        private void materialRaisedButton2_Click(object sender, EventArgs e)
-        {
-            materialProgressBar1.Value = Math.Min(materialProgressBar1.Value + 10, 100);
-        }
-
-        private void materialFlatButton4_Click(object sender, EventArgs e)
-        {
-            materialProgressBar1.Value = Math.Max(materialProgressBar1.Value - 10, 0);
-        }
-
         private void materialFlatButton2_Click(object sender, EventArgs e)
         {
             Form form1 = new Form1();
