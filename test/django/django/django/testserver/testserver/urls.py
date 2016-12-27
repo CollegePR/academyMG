@@ -22,4 +22,5 @@ urlpatterns = [
     url(r'^getlistsize/',views.listSize),
     url(r'^getInsuranceInfo/',views.getInsuranceInfo),
     url(r'^putInsuranceInfo/',views.putInsuranceInfo),
+    url(r'^testpage/',views.testpage),
 ]
