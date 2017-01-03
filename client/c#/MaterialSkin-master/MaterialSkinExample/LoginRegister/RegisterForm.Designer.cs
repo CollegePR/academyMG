@@ -28,133 +28,128 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.IDInputField = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.PWInputField = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.PWCMPInputField = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.ClassInputField = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.NameInputField = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.SubmitButton = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.tf_register_id = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tf_register_password = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tf_register_password_compare = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.tf_register_name = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.fb_register_submit = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.rb_register_class = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
             // 
-            // IDInputField
+            // tf_register_id
             // 
-            this.IDInputField.Depth = 0;
-            this.IDInputField.Hint = "";
-            this.IDInputField.Location = new System.Drawing.Point(12, 84);
-            this.IDInputField.MaxLength = 32767;
-            this.IDInputField.MouseState = MaterialSkin.MouseState.HOVER;
-            this.IDInputField.Name = "IDInputField";
-            this.IDInputField.PasswordChar = '\0';
-            this.IDInputField.SelectedText = "";
-            this.IDInputField.SelectionLength = 0;
-            this.IDInputField.SelectionStart = 0;
-            this.IDInputField.Size = new System.Drawing.Size(75, 28);
-            this.IDInputField.TabIndex = 0;
-            this.IDInputField.TabStop = false;
-            this.IDInputField.Text = "ID";
-            this.IDInputField.UseSystemPasswordChar = false;
+            this.tf_register_id.Depth = 0;
+            this.tf_register_id.Hint = "";
+            this.tf_register_id.Location = new System.Drawing.Point(12, 84);
+            this.tf_register_id.MaxLength = 32767;
+            this.tf_register_id.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tf_register_id.Name = "tf_register_id";
+            this.tf_register_id.PasswordChar = '\0';
+            this.tf_register_id.SelectedText = "";
+            this.tf_register_id.SelectionLength = 0;
+            this.tf_register_id.SelectionStart = 0;
+            this.tf_register_id.Size = new System.Drawing.Size(75, 28);
+            this.tf_register_id.TabIndex = 0;
+            this.tf_register_id.TabStop = false;
+            this.tf_register_id.Text = "ID";
+            this.tf_register_id.UseSystemPasswordChar = false;
             // 
-            // PWInputField
+            // tf_register_password
             // 
-            this.PWInputField.Depth = 0;
-            this.PWInputField.Hint = "";
-            this.PWInputField.Location = new System.Drawing.Point(13, 119);
-            this.PWInputField.MaxLength = 32767;
-            this.PWInputField.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PWInputField.Name = "PWInputField";
-            this.PWInputField.PasswordChar = '\0';
-            this.PWInputField.SelectedText = "";
-            this.PWInputField.SelectionLength = 0;
-            this.PWInputField.SelectionStart = 0;
-            this.PWInputField.Size = new System.Drawing.Size(75, 28);
-            this.PWInputField.TabIndex = 1;
-            this.PWInputField.TabStop = false;
-            this.PWInputField.Text = "PW";
-            this.PWInputField.UseSystemPasswordChar = false;
+            this.tf_register_password.Depth = 0;
+            this.tf_register_password.Hint = "";
+            this.tf_register_password.Location = new System.Drawing.Point(13, 119);
+            this.tf_register_password.MaxLength = 32767;
+            this.tf_register_password.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tf_register_password.Name = "tf_register_password";
+            this.tf_register_password.PasswordChar = '\0';
+            this.tf_register_password.SelectedText = "";
+            this.tf_register_password.SelectionLength = 0;
+            this.tf_register_password.SelectionStart = 0;
+            this.tf_register_password.Size = new System.Drawing.Size(75, 28);
+            this.tf_register_password.TabIndex = 1;
+            this.tf_register_password.TabStop = false;
+            this.tf_register_password.Text = "PW";
+            this.tf_register_password.UseSystemPasswordChar = false;
             // 
-            // PWCMPInputField
+            // tf_register_password_compare
             // 
-            this.PWCMPInputField.Depth = 0;
-            this.PWCMPInputField.Hint = "";
-            this.PWCMPInputField.Location = new System.Drawing.Point(13, 154);
-            this.PWCMPInputField.MaxLength = 32767;
-            this.PWCMPInputField.MouseState = MaterialSkin.MouseState.HOVER;
-            this.PWCMPInputField.Name = "PWCMPInputField";
-            this.PWCMPInputField.PasswordChar = '\0';
-            this.PWCMPInputField.SelectedText = "";
-            this.PWCMPInputField.SelectionLength = 0;
-            this.PWCMPInputField.SelectionStart = 0;
-            this.PWCMPInputField.Size = new System.Drawing.Size(75, 28);
-            this.PWCMPInputField.TabIndex = 2;
-            this.PWCMPInputField.TabStop = false;
-            this.PWCMPInputField.Text = "PW CMP";
-            this.PWCMPInputField.UseSystemPasswordChar = false;
+            this.tf_register_password_compare.Depth = 0;
+            this.tf_register_password_compare.Hint = "";
+            this.tf_register_password_compare.Location = new System.Drawing.Point(13, 154);
+            this.tf_register_password_compare.MaxLength = 32767;
+            this.tf_register_password_compare.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tf_register_password_compare.Name = "tf_register_password_compare";
+            this.tf_register_password_compare.PasswordChar = '\0';
+            this.tf_register_password_compare.SelectedText = "";
+            this.tf_register_password_compare.SelectionLength = 0;
+            this.tf_register_password_compare.SelectionStart = 0;
+            this.tf_register_password_compare.Size = new System.Drawing.Size(75, 28);
+            this.tf_register_password_compare.TabIndex = 2;
+            this.tf_register_password_compare.TabStop = false;
+            this.tf_register_password_compare.Text = "PW CMP";
+            this.tf_register_password_compare.UseSystemPasswordChar = false;
             // 
-            // ClassInputField
+            // tf_register_name
             // 
-            this.ClassInputField.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.ClassInputField.Depth = 0;
-            this.ClassInputField.Enabled = false;
-            this.ClassInputField.Hint = "";
-            this.ClassInputField.Location = new System.Drawing.Point(250, 84);
-            this.ClassInputField.MaxLength = 32767;
-            this.ClassInputField.MouseState = MaterialSkin.MouseState.HOVER;
-            this.ClassInputField.Name = "ClassInputField";
-            this.ClassInputField.PasswordChar = '\0';
-            this.ClassInputField.SelectedText = "";
-            this.ClassInputField.SelectionLength = 0;
-            this.ClassInputField.SelectionStart = 0;
-            this.ClassInputField.Size = new System.Drawing.Size(75, 28);
-            this.ClassInputField.TabIndex = 3;
-            this.ClassInputField.TabStop = false;
-            this.ClassInputField.Text = "Class";
-            this.ClassInputField.UseSystemPasswordChar = false;
-            this.ClassInputField.Click += new System.EventHandler(this.ClassInputField_Click);
+            this.tf_register_name.Depth = 0;
+            this.tf_register_name.Hint = "";
+            this.tf_register_name.Location = new System.Drawing.Point(250, 154);
+            this.tf_register_name.MaxLength = 32767;
+            this.tf_register_name.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tf_register_name.Name = "tf_register_name";
+            this.tf_register_name.PasswordChar = '\0';
+            this.tf_register_name.SelectedText = "";
+            this.tf_register_name.SelectionLength = 0;
+            this.tf_register_name.SelectionStart = 0;
+            this.tf_register_name.Size = new System.Drawing.Size(75, 28);
+            this.tf_register_name.TabIndex = 4;
+            this.tf_register_name.TabStop = false;
+            this.tf_register_name.Text = "Name";
+            this.tf_register_name.UseSystemPasswordChar = false;
             // 
-            // NameInputField
+            // fb_register_submit
             // 
-            this.NameInputField.Depth = 0;
-            this.NameInputField.Hint = "";
-            this.NameInputField.Location = new System.Drawing.Point(250, 123);
-            this.NameInputField.MaxLength = 32767;
-            this.NameInputField.MouseState = MaterialSkin.MouseState.HOVER;
-            this.NameInputField.Name = "NameInputField";
-            this.NameInputField.PasswordChar = '\0';
-            this.NameInputField.SelectedText = "";
-            this.NameInputField.SelectionLength = 0;
-            this.NameInputField.SelectionStart = 0;
-            this.NameInputField.Size = new System.Drawing.Size(75, 28);
-            this.NameInputField.TabIndex = 4;
-            this.NameInputField.TabStop = false;
-            this.NameInputField.Text = "Name";
-            this.NameInputField.UseSystemPasswordChar = false;
+            this.fb_register_submit.AutoSize = true;
+            this.fb_register_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.fb_register_submit.Depth = 0;
+            this.fb_register_submit.Icon = null;
+            this.fb_register_submit.Location = new System.Drawing.Point(125, 295);
+            this.fb_register_submit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.fb_register_submit.Name = "fb_register_submit";
+            this.fb_register_submit.Primary = true;
+            this.fb_register_submit.Size = new System.Drawing.Size(85, 36);
+            this.fb_register_submit.TabIndex = 5;
+            this.fb_register_submit.Text = "Submit";
+            this.fb_register_submit.UseVisualStyleBackColor = true;
             // 
-            // SubmitButton
+            // rb_register_class
             // 
-            this.SubmitButton.AutoSize = true;
-            this.SubmitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
-            this.SubmitButton.Depth = 0;
-            this.SubmitButton.Icon = null;
-            this.SubmitButton.Location = new System.Drawing.Point(117, 295);
-            this.SubmitButton.MouseState = MaterialSkin.MouseState.HOVER;
-            this.SubmitButton.Name = "SubmitButton";
-            this.SubmitButton.Primary = true;
-            this.SubmitButton.Size = new System.Drawing.Size(85, 36);
-            this.SubmitButton.TabIndex = 5;
-            this.SubmitButton.Text = "Submit";
-            this.SubmitButton.UseVisualStyleBackColor = true;
+            this.rb_register_class.AutoSize = true;
+            this.rb_register_class.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rb_register_class.Depth = 0;
+            this.rb_register_class.Icon = null;
+            this.rb_register_class.Location = new System.Drawing.Point(250, 84);
+            this.rb_register_class.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rb_register_class.Name = "rb_register_class";
+            this.rb_register_class.Primary = true;
+            this.rb_register_class.Size = new System.Drawing.Size(75, 36);
+            this.rb_register_class.TabIndex = 6;
+            this.rb_register_class.Text = "Class";
+            this.rb_register_class.UseVisualStyleBackColor = true;
+            this.rb_register_class.Click += new System.EventHandler(this.rb_register_class_Click);
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(337, 343);
-            this.Controls.Add(this.SubmitButton);
-            this.Controls.Add(this.NameInputField);
-            this.Controls.Add(this.ClassInputField);
-            this.Controls.Add(this.PWCMPInputField);
-            this.Controls.Add(this.PWInputField);
-            this.Controls.Add(this.IDInputField);
+            this.Controls.Add(this.rb_register_class);
+            this.Controls.Add(this.fb_register_submit);
+            this.Controls.Add(this.tf_register_name);
+            this.Controls.Add(this.tf_register_password_compare);
+            this.Controls.Add(this.tf_register_password);
+            this.Controls.Add(this.tf_register_id);
             this.Name = "RegisterForm";
             this.Text = "RegisterForm";
             this.Load += new System.EventHandler(this.RegisterForm_Load);
@@ -165,11 +160,11 @@
 
         #endregion
 
-        private MaterialSkin.Controls.MaterialSingleLineTextField IDInputField;
-        private MaterialSkin.Controls.MaterialSingleLineTextField PWInputField;
-        private MaterialSkin.Controls.MaterialSingleLineTextField PWCMPInputField;
-        private MaterialSkin.Controls.MaterialSingleLineTextField ClassInputField;
-        private MaterialSkin.Controls.MaterialSingleLineTextField NameInputField;
-        private MaterialSkin.Controls.MaterialRaisedButton SubmitButton;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tf_register_id;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tf_register_password;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tf_register_password_compare;
+        private MaterialSkin.Controls.MaterialSingleLineTextField tf_register_name;
+        private MaterialSkin.Controls.MaterialRaisedButton fb_register_submit;
+        private MaterialSkin.Controls.MaterialRaisedButton rb_register_class;
     }
 }

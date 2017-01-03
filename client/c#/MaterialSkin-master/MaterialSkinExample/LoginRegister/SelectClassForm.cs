@@ -32,5 +32,6 @@ namespace MaterialSkinExample.LoginRegister
                 Elements.Add(Element);
             }
         }
+
     }
 }

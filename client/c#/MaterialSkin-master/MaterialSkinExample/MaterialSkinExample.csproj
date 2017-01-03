@@ -84,6 +84,7 @@
     <Compile Include="ShowDialogForm.Designer.cs">
       <DependentUpon>ShowDialogForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Student.cs" />
     <Compile Include="Util.cs" />
     <EmbeddedResource Include="LoginRegister\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>

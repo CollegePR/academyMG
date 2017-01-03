@@ -38,6 +38,11 @@ namespace MaterialSkinExample
             this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.tabPage2 = new System.Windows.Forms.TabPage();
+            this.tf_addstudent_name = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.rb_addstudent_submit = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.lb_addstudent_sex = new MaterialSkin.Controls.MaterialLabel();
+            this.lb_addstudent_id = new MaterialSkin.Controls.MaterialSingleLineTextField();
+            this.materialDivider2 = new MaterialSkin.Controls.MaterialDivider();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.tabPage4 = new System.Windows.Forms.TabPage();
             this.materialContextMenuStrip1 = new MaterialSkin.Controls.MaterialContextMenuStrip();
@@ -49,6 +54,7 @@ namespace MaterialSkinExample
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.materialTabControl1.SuspendLayout();
+            this.tabPage2.SuspendLayout();
             this.materialContextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -112,6 +118,11 @@ namespace MaterialSkinExample
             // tabPage2
             // 
             this.tabPage2.BackColor = System.Drawing.Color.White;
+            this.tabPage2.Controls.Add(this.tf_addstudent_name);
+            this.tabPage2.Controls.Add(this.rb_addstudent_submit);
+            this.tabPage2.Controls.Add(this.lb_addstudent_sex);
+            this.tabPage2.Controls.Add(this.lb_addstudent_id);
+            this.tabPage2.Controls.Add(this.materialDivider2);
             this.tabPage2.Location = new System.Drawing.Point(4, 25);
             this.tabPage2.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage2.Name = "tabPage2";
@@ -119,6 +130,82 @@ namespace MaterialSkinExample
             this.tabPage2.Size = new System.Drawing.Size(779, 266);
             this.tabPage2.TabIndex = 1;
             this.tabPage2.Text = "원생추가";
+            // 
+            // tf_addstudent_name
+            // 
+            this.tf_addstudent_name.Depth = 0;
+            this.tf_addstudent_name.Hint = "";
+            this.tf_addstudent_name.Location = new System.Drawing.Point(6, 160);
+            this.tf_addstudent_name.MaxLength = 32767;
+            this.tf_addstudent_name.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tf_addstudent_name.Name = "tf_addstudent_name";
+            this.tf_addstudent_name.PasswordChar = '\0';
+            this.tf_addstudent_name.SelectedText = "";
+            this.tf_addstudent_name.SelectionLength = 0;
+            this.tf_addstudent_name.SelectionStart = 0;
+            this.tf_addstudent_name.Size = new System.Drawing.Size(75, 28);
+            this.tf_addstudent_name.TabIndex = 4;
+            this.tf_addstudent_name.TabStop = false;
+            this.tf_addstudent_name.Text = "이름";
+            this.tf_addstudent_name.UseSystemPasswordChar = false;
+            // 
+            // rb_addstudent_submit
+            // 
+            this.rb_addstudent_submit.AutoSize = true;
+            this.rb_addstudent_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rb_addstudent_submit.Depth = 0;
+            this.rb_addstudent_submit.Icon = null;
+            this.rb_addstudent_submit.Location = new System.Drawing.Point(675, 223);
+            this.rb_addstudent_submit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rb_addstudent_submit.Name = "rb_addstudent_submit";
+            this.rb_addstudent_submit.Primary = true;
+            this.rb_addstudent_submit.Size = new System.Drawing.Size(98, 36);
+            this.rb_addstudent_submit.TabIndex = 3;
+            this.rb_addstudent_submit.Text = "원생추가";
+            this.rb_addstudent_submit.UseVisualStyleBackColor = true;
+            // 
+            // lb_addstudent_sex
+            // 
+            this.lb_addstudent_sex.AutoSize = true;
+            this.lb_addstudent_sex.Depth = 0;
+            this.lb_addstudent_sex.Font = new System.Drawing.Font("Roboto", 11F);
+            this.lb_addstudent_sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.lb_addstudent_sex.Location = new System.Drawing.Point(114, 130);
+            this.lb_addstudent_sex.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lb_addstudent_sex.Name = "lb_addstudent_sex";
+            this.lb_addstudent_sex.Size = new System.Drawing.Size(25, 24);
+            this.lb_addstudent_sex.TabIndex = 0;
+            this.lb_addstudent_sex.Text = "남";
+            this.lb_addstudent_sex.Click += new System.EventHandler(this.lb_addstudent_sex_Click);
+            // 
+            // lb_addstudent_id
+            // 
+            this.lb_addstudent_id.Depth = 0;
+            this.lb_addstudent_id.Hint = "";
+            this.lb_addstudent_id.Location = new System.Drawing.Point(6, 126);
+            this.lb_addstudent_id.MaxLength = 32767;
+            this.lb_addstudent_id.MouseState = MaterialSkin.MouseState.HOVER;
+            this.lb_addstudent_id.Name = "lb_addstudent_id";
+            this.lb_addstudent_id.PasswordChar = '\0';
+            this.lb_addstudent_id.SelectedText = "";
+            this.lb_addstudent_id.SelectionLength = 0;
+            this.lb_addstudent_id.SelectionStart = 0;
+            this.lb_addstudent_id.Size = new System.Drawing.Size(75, 28);
+            this.lb_addstudent_id.TabIndex = 1;
+            this.lb_addstudent_id.TabStop = false;
+            this.lb_addstudent_id.Text = "학생번호";
+            this.lb_addstudent_id.UseSystemPasswordChar = false;
+            // 
+            // materialDivider2
+            // 
+            this.materialDivider2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialDivider2.Depth = 0;
+            this.materialDivider2.Location = new System.Drawing.Point(6, 7);
+            this.materialDivider2.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialDivider2.Name = "materialDivider2";
+            this.materialDivider2.Size = new System.Drawing.Size(133, 147);
+            this.materialDivider2.TabIndex = 2;
+            this.materialDivider2.Text = "materialDivider2";
             // 
             // tabPage3
             // 
@@ -225,6 +312,8 @@ namespace MaterialSkinExample
             this.Text = "관리";
             this.Load += new System.EventHandler(this.MainForm_Load);
             this.materialTabControl1.ResumeLayout(false);
+            this.tabPage2.ResumeLayout(false);
+            this.tabPage2.PerformLayout();
             this.materialContextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -247,5 +336,10 @@ namespace MaterialSkinExample
         private System.Windows.Forms.ToolStripSeparator toolStripSeparator1;
         private System.Windows.Forms.ToolStripMenuItem disabledItemToolStripMenuItem;
         private TabPage tabPage4;
+        private MaterialLabel lb_addstudent_sex;
+        private MaterialSingleLineTextField lb_addstudent_id;
+        private MaterialDivider materialDivider2;
+        private MaterialRaisedButton rb_addstudent_submit;
+        private MaterialSingleLineTextField tf_addstudent_name;
     }
 }

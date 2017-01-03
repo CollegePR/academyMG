@@ -24,5 +24,13 @@ namespace MaterialSkinExample
         {
 
         }
+
+        private void lb_addstudent_sex_Click(object sender, EventArgs e)
+        {
+            if(lb_addstudent_sex.Text=="남")
+                lb_addstudent_sex.Text="여";
+            else
+                lb_addstudent_sex.Text="남";
+        }
     }
 }

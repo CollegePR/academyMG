@@ -23,29 +23,32 @@ namespace MaterialSkinExample
         {
 
         }
-
-        private void SubmitButton_Click(object sender, EventArgs e)
+        
+        private void fb_login_submit_Click(object sender, EventArgs e)
         {
             bool LoginSuccess = false;
-            string ID = IDInputfield.Text;
-            string PW = PWInputfield.Text;
-            Util.ShowInDialog("Test","ID : " + ID + "\nPW : " + PW);
+            string ID = tf_login_id.Text;
+            string PW = tf_login_password.Text;
+            Util.ShowInDialog("Test", "ID : " + ID + "\nPW : " + PW);
             //서버
 
             LoginSuccess = true;
 
-            if (LoginSuccess == true) {
+            if (LoginSuccess == true)
+            {
                 MainForm MainScreen = new MainForm();
                 MainScreen.Show();
                 this.Close();
             }
         }
 
-        private void RegisterButton_Click(object sender, EventArgs e)
+        private void fb_login_register_Click(object sender, EventArgs e)
         {
             Form Register = new RegisterForm();
             Register.ShowDialog();
             //Util.Notification("알림","Test");
         }
+
+        
     }
 }

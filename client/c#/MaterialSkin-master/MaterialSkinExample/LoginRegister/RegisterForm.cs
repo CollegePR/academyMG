@@ -25,7 +25,7 @@ namespace MaterialSkinExample
 
         }
 
-        private void ClassInputField_Click(object sender, EventArgs e)
+        private void rb_register_class_Click(object sender, EventArgs e)
         {
             SelectClassForm SCF = new SelectClassForm();
             SCF.ShowDialog();
