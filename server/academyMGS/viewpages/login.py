@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def login(request):
-    data = [{'status': False,'flag': False}]
+    data = {'flag': False,'data':{}}
     id = ""
     password = ""
     try:
@@ -15,11 +15,10 @@ def login(request):
         else:
             return HttpResponse(json.dumps(data), content_type='application/json')
         obj = Teacher.objects.get(id=id)
-        if obj.password == password:
-            data = [{'status': True,'flag': True,'class':obj.acdemy_class,'name':obj.name,}]
+        if obj.password == password and obj.status == 2:
+            data = {'flag': True,'data':{'class':obj.acdemy_class,'name':obj.name,}}
         else:
-            data = [{'status': True,'flag': False,}]
-
+            return HttpResponse(json.dumps(data), content_type='application/json')
     except:
         return HttpResponse(json.dumps(data), content_type='application/json')
     return HttpResponse(json.dumps(data), content_type='application/json')

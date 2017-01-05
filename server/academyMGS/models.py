@@ -81,7 +81,7 @@ class Teacher(models.Model):
     name = models.CharField(max_length=18)
     #어떤 반인지 AcademyClass id값임.
     acdemy_class = models.IntegerField(blank=True,null=True)
-
+    status = models.IntegerField(default=1)
     def __str__(self):  # __unicode__ on Python 2
         return self.name
 class AttendanceCheck(models.Model):
