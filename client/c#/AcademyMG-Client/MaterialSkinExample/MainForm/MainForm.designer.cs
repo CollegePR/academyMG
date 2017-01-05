@@ -35,7 +35,7 @@ namespace MaterialSkinExample
         {
             this.materialDivider1 = new MaterialSkin.Controls.MaterialDivider();
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
-            this.materialTabControl1 = new MaterialSkin.Controls.MaterialTabControl();
+            this.rb_attend_submit = new MaterialSkin.Controls.MaterialTabControl();
             this.MainPage = new System.Windows.Forms.TabPage();
             this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
             this.tabPage2 = new System.Windows.Forms.TabPage();
@@ -60,10 +60,12 @@ namespace MaterialSkinExample
             this.item2ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
-            this.materialTabControl1.SuspendLayout();
+            this.rb_ = new MaterialSkin.Controls.MaterialRaisedButton();
+            this.rb_attend_submit.SuspendLayout();
             this.MainPage.SuspendLayout();
             this.tabPage2.SuspendLayout();
             this.tabPage3.SuspendLayout();
+            this.tabPage4.SuspendLayout();
             this.materialContextMenuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -85,7 +87,7 @@ namespace MaterialSkinExample
             // 
             this.materialTabSelector1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialTabSelector1.BaseTabControl = this.materialTabControl1;
+            this.materialTabSelector1.BaseTabControl = this.rb_attend_submit;
             this.materialTabSelector1.Depth = 0;
             this.materialTabSelector1.Location = new System.Drawing.Point(0, 74);
             this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
@@ -95,23 +97,23 @@ namespace MaterialSkinExample
             this.materialTabSelector1.TabIndex = 17;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
-            // materialTabControl1
+            // rb_attend_submit
             // 
-            this.materialTabControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.rb_attend_submit.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.materialTabControl1.Controls.Add(this.MainPage);
-            this.materialTabControl1.Controls.Add(this.tabPage2);
-            this.materialTabControl1.Controls.Add(this.tabPage3);
-            this.materialTabControl1.Controls.Add(this.tabPage4);
-            this.materialTabControl1.Depth = 0;
-            this.materialTabControl1.Location = new System.Drawing.Point(18, 128);
-            this.materialTabControl1.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
-            this.materialTabControl1.MouseState = MaterialSkin.MouseState.HOVER;
-            this.materialTabControl1.Name = "materialTabControl1";
-            this.materialTabControl1.SelectedIndex = 0;
-            this.materialTabControl1.Size = new System.Drawing.Size(787, 295);
-            this.materialTabControl1.TabIndex = 18;
+            this.rb_attend_submit.Controls.Add(this.MainPage);
+            this.rb_attend_submit.Controls.Add(this.tabPage2);
+            this.rb_attend_submit.Controls.Add(this.tabPage3);
+            this.rb_attend_submit.Controls.Add(this.tabPage4);
+            this.rb_attend_submit.Depth = 0;
+            this.rb_attend_submit.Location = new System.Drawing.Point(18, 128);
+            this.rb_attend_submit.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
+            this.rb_attend_submit.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rb_attend_submit.Name = "rb_attend_submit";
+            this.rb_attend_submit.SelectedIndex = 0;
+            this.rb_attend_submit.Size = new System.Drawing.Size(787, 295);
+            this.rb_attend_submit.TabIndex = 18;
             // 
             // MainPage
             // 
@@ -347,6 +349,7 @@ namespace MaterialSkinExample
             // 
             // tabPage4
             // 
+            this.tabPage4.Controls.Add(this.rb_);
             this.tabPage4.Location = new System.Drawing.Point(4, 25);
             this.tabPage4.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.tabPage4.Name = "tabPage4";
@@ -424,6 +427,21 @@ namespace MaterialSkinExample
             this.item3ToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.item3ToolStripMenuItem.Text = "Item 3";
             // 
+            // rb_
+            // 
+            this.rb_.AutoSize = true;
+            this.rb_.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.rb_.Depth = 0;
+            this.rb_.Icon = null;
+            this.rb_.Location = new System.Drawing.Point(675, 223);
+            this.rb_.MouseState = MaterialSkin.MouseState.HOVER;
+            this.rb_.Name = "rb_";
+            this.rb_.Primary = true;
+            this.rb_.Size = new System.Drawing.Size(98, 36);
+            this.rb_.TabIndex = 0;
+            this.rb_.Text = "출석체크";
+            this.rb_.UseVisualStyleBackColor = true;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -432,18 +450,20 @@ namespace MaterialSkinExample
             this.ClientSize = new System.Drawing.Size(823, 495);
             this.ContextMenuStrip = this.materialContextMenuStrip1;
             this.Controls.Add(this.materialTabSelector1);
-            this.Controls.Add(this.materialTabControl1);
+            this.Controls.Add(this.rb_attend_submit);
             this.Controls.Add(this.materialDivider1);
             this.Margin = new System.Windows.Forms.Padding(3, 4, 3, 4);
             this.Name = "MainForm";
             this.Text = "관리";
             this.Load += new System.EventHandler(this.MainForm_Load);
-            this.materialTabControl1.ResumeLayout(false);
+            this.rb_attend_submit.ResumeLayout(false);
             this.MainPage.ResumeLayout(false);
             this.tabPage2.ResumeLayout(false);
             this.tabPage2.PerformLayout();
             this.tabPage3.ResumeLayout(false);
             this.tabPage3.PerformLayout();
+            this.tabPage4.ResumeLayout(false);
+            this.tabPage4.PerformLayout();
             this.materialContextMenuStrip1.ResumeLayout(false);
             this.ResumeLayout(false);
 
@@ -453,7 +473,7 @@ namespace MaterialSkinExample
 
         private MaterialDivider materialDivider1;
         private MaterialTabSelector materialTabSelector1;
-        private MaterialTabControl materialTabControl1;
+        private MaterialTabControl rb_attend_submit;
         private System.Windows.Forms.TabPage MainPage;
         private System.Windows.Forms.TabPage tabPage2;
         private System.Windows.Forms.TabPage tabPage3;
@@ -478,5 +498,6 @@ namespace MaterialSkinExample
         private MaterialSingleLineTextField tf_renewstudent_search;
         private MaterialSingleLineTextField tf_renewstudent_id;
         private MaterialSingleLineTextField tf_renewstudent_name;
+        private MaterialRaisedButton rb_;
     }
 }
