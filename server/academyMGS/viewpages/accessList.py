@@ -4,7 +4,7 @@ from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
 
 
-def a(request):
+def accessList(request):
     data = [{'status': False}, {'flag': False}]
     requestId = ""
     try:
