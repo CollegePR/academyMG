@@ -2,7 +2,7 @@ from .models import *
 import json
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-from .viewpages import addStudent,login,index,idCheck,register,setStudent,search
+from .viewpages import addStudent,login,index,idCheck,register,setStudent,search,accessList
 @csrf_exempt
 def addStudentPage(request):
     return addStudent.addStudent(request)
@@ -24,3 +24,9 @@ def searchPage(request):
 @csrf_exempt
 def setStudentPage(request):
     return setStudent.setStudent(request)
+@csrf_exempt
+def setStudentPage(request):
+    return setStudent.setStudent(request)
+@csrf_exempt
+def accessListPage(request):
+    return accessList.accessList(request)
