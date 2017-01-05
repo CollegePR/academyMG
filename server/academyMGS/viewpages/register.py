@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def register(request):
-    data = [{'status': False,'flag': False}]
+    data = {'flag': False}
     id = ""
     password = ""
     academy_class = ""
@@ -25,7 +25,7 @@ def register(request):
             name=name,
         )
         teacher.save()
-        data = [{'status': True, 'flag': True}, ]
+        data = {'flag': True}
     except:
         return HttpResponse(json.dumps(data), content_type='application/json')
 

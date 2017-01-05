@@ -5,7 +5,7 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def accessList(request):
-    data = {'flag': False,'data':[{},{}]}
+    data = {'flag': False,'data':[]}
     requestId = ""
     try:
         Teacher.objects.filter(status=1)
