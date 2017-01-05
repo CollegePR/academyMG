@@ -9,7 +9,7 @@ def idCheck(request):
     requestId = ""
     try:
         if request.method == 'GET':
-            requestId = request.GET['id']
+            requestId = request.GET.get('id')
         else:
             return HttpResponse(json.dumps(data), content_type='application/json')
         data = [{'status': True, 'flag': (Teacher.objects.filter(id=requestId).exists()) and (True) or (False)}, ]
