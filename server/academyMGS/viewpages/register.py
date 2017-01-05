@@ -26,7 +26,7 @@ def register(request):
         )
         teacher.save()
         data = [{'status': True, 'flag': True}, ]
-    except TypeError:
+    except:
         return HttpResponse(json.dumps(data), content_type='application/json')
 
     return HttpResponse(json.dumps(data), content_type='application/json')
