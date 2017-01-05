@@ -7,26 +7,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
-using MaterialSkin;
-using MaterialSkin.Controls;
 
 namespace MaterialSkinExample.LoginRegister
 {
-    public partial class RegisterForm : MaterialForm
+    public partial class SelectClassForm : Form
     {
-        public RegisterForm()
+        public SelectClassForm()
         {
             InitializeComponent();
-        }
-
-        private void RegisterForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tf_register_class_Click(object sender, EventArgs e)
-        {
-            
         }
     }
 }

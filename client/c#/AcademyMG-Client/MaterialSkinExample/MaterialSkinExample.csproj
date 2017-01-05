@@ -94,6 +94,12 @@
     <Compile Include="LoginRegister\LoginForm.Designer.cs">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="LoginRegister\SelectClassForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LoginRegister\SelectClassForm.Designer.cs">
+      <DependentUpon>SelectClassForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="RetrofitService\IDCheckService.cs" />
     <Compile Include="RetrofitService\Response.cs" />
     <Compile Include="Weather.cs" />

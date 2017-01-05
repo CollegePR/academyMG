@@ -25,26 +25,31 @@ namespace MaterialSkinExample.LoginRegister
 
         private void LoginForm_Load(object sender, EventArgs e)
         {
-
+            
         }
 
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            if (IDInputfield.Text.Length == 0 || PWInputfield.Text.Length == 0) materialLabel2.Text = "아이디/비밀번호를 입력하세요";
+            if (tf_login_id.Text.Length == 0 || tf_login_pw.Text.Length == 0) materialLabel2.Text = "아이디/비밀번호를 입력하세요";
             else
             {
-                //RestAdapter adapter = new RestAdapter("http://192.168.1.51:5013/");
-                RestAdapter adapter = new RestAdapter("http://192.168.0.16:5013/");
+                RestAdapter adapter = new RestAdapter("http://127.0.0.1:5013/");
                 IDCheckService service = adapter.Create<IDCheckService>();
                 RestResponse<List<Response>> IDcheckResponse = service.IDCheck("test");
 
 
-                materialLabel1.Text = SHA256_Encryptor.SHA256Hash(PWInputfield.Text);
+                materialLabel1.Text = SHA256_Encryptor.SHA256Hash(tf_login_pw.Text);
 
                 if (IDcheckResponse.Data[0].flag == true) materialLabel2.Text = "true";
                 else materialLabel2.Text = "false";
             }
 
+        }
+
+        private void RegisterButton_Click(object sender, EventArgs e)
+        {
+            RegisterForm registerForm = new RegisterForm();
+            registerForm.ShowDialog();
         }
     }
 }
