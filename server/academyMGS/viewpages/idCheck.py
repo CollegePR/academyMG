@@ -12,5 +12,5 @@ def idCheck(request):
     else:
         return HttpResponse(json.dumps(data), content_type='application/json')
 
-    data = [{'status':True},{'flag': (Teacher.objects.filter(id=requestId).exists())and(True)or(False)}, ]
+    data = [{'status':True ,'flag': (Teacher.objects.filter(id=requestId).exists())and(True)or(False)}, ]
     return HttpResponse(json.dumps(data), content_type='application/json')
