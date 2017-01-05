@@ -1,0 +1,7 @@
+C:\Users\okms00909\Documents\GitHub\academyMG\client\c#\AcademyMG-Client\MaterialSkin\bin\Debug\MaterialSkin.dll
+C:\Users\okms00909\Documents\GitHub\academyMG\client\c#\AcademyMG-Client\MaterialSkin\bin\Debug\MaterialSkin.pdb
+C:\Users\okms00909\Documents\GitHub\academyMG\client\c#\AcademyMG-Client\MaterialSkin\obj\Debug\MaterialSkin.csprojResolveAssemblyReference.cache
+C:\Users\okms00909\Documents\GitHub\academyMG\client\c#\AcademyMG-Client\MaterialSkin\obj\Debug\MaterialSkin.Properties.Resources.resources
+C:\Users\okms00909\Documents\GitHub\academyMG\client\c#\AcademyMG-Client\MaterialSkin\obj\Debug\MaterialSkin.csproj.GenerateResource.Cache
+C:\Users\okms00909\Documents\GitHub\academyMG\client\c#\AcademyMG-Client\MaterialSkin\obj\Debug\MaterialSkin.dll
+C:\Users\okms00909\Documents\GitHub\academyMG\client\c#\AcademyMG-Client\MaterialSkin\obj\Debug\MaterialSkin.pdb
