@@ -37,8 +37,8 @@ class AcademyClass(models.Model):
 
     #monday : 1 tuesday : 2 wendsday : 3 .....
     date = ListField(blank=True,null=True)
-    start_time = models.TimeField()
-    end_time = models.TimeField()
+    start_time = models.TimeField( blank=True,null=True)
+    end_time = models.TimeField( blank=True,null=True)
 
     def __str__(self):  # __unicode__ on Python 2
         return self.name
@@ -94,5 +94,5 @@ class AttendanceCheck(models.Model):
     check = models.BooleanField()
 
     def __str__(self):  # __unicode__ on Python 2
-        return self.name
+        return self.student_id
 

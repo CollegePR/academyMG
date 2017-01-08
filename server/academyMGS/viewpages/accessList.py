@@ -5,11 +5,18 @@ from django.views.decorators.csrf import csrf_exempt
 
 
 def accessList(request):
-    data = {'flag': False,'data':[]}
+    data = {'flag': False, 'data': []}
     requestId = ""
     try:
-        Teacher.objects.filter(status=1)
-        data = [{'status': True, 'flag': (Teacher.objects.filter(id=requestId).exists()) and (True) or (False)}, ]
+        objs = Teacher.objects.filter(status=1)
+        for obj in objs:
+            data.get("data").insert(
+                {
+                    "name": obj.name,
+                    "id": obj.id,
+                    "academyClass": obj.acdemy_class,
+                }
+            )
     except:
         return HttpResponse(json.dumps(data), content_type='application/json')
 
