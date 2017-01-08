@@ -37,6 +37,8 @@ class AcademyClass(models.Model):
 
     #monday : 1 tuesday : 2 wendsday : 3 .....
     date = ListField(blank=True,null=True)
+    start_time = models.TimeField( blank=True,null=True)
+    end_time = models.TimeField( blank=True,null=True)
 
     def __str__(self):  # __unicode__ on Python 2
         return self.name
@@ -65,7 +67,7 @@ class Student(models.Model):
     status_of_sign = models.IntegerField(range(1, 3))
     #어떤 반인지 AcademyClass id값임.
     acdemy_class = models.IntegerField(blank=True,null=True)
-
+    #attendanceCheck = AttendanceCheck()
     def __str__(self):  # __unicode__ on Python 2
         return self.name
 
@@ -79,7 +81,7 @@ class Teacher(models.Model):
     name = models.CharField(max_length=18)
     #어떤 반인지 AcademyClass id값임.
     acdemy_class = models.IntegerField(blank=True,null=True)
-
+    status = models.IntegerField(default=1)
     def __str__(self):  # __unicode__ on Python 2
         return self.name
 class AttendanceCheck(models.Model):
@@ -92,5 +94,5 @@ class AttendanceCheck(models.Model):
     check = models.BooleanField()
 
     def __str__(self):  # __unicode__ on Python 2
-        return self.name
+        return self.student_id
 
