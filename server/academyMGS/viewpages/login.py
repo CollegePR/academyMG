@@ -16,7 +16,7 @@ def login(request):
             return HttpResponse(json.dumps(data), content_type='application/json')
         obj = Teacher.objects.get(id=id)
         if obj.password == password and obj.status == 2:
-            data = {'flag': True,'data':{'class':obj.acdemy_class,'name':obj.name,}}
+            data = {'flag': True,'data':{'academy_class':obj.acdemy_class,'name':obj.name,}}
         else:
             return HttpResponse(json.dumps(data), content_type='application/json')
     except:
