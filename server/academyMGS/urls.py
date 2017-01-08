@@ -8,4 +8,7 @@ urlpatterns = (
     url(r'^register', registerPage),
     url(r'^search', searchPage),
     url(r'^setstudent', setStudentPage),
+    url(r'^accesslist', accessListPage),
+    url(r'^setteacher', setTeacherPage),
+
 )
