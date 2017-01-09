@@ -481,6 +481,12 @@ namespace Refit.Tests
             Client = client;
         }
 
+        public virtual Task<LoginResponse> Login(LoginData login)
+        {
+            var arguments = new object[] { login };
+            return (Task<LoginResponse>) methodImpls["Login"](Client, arguments);
+        }
+
         public virtual Task<RegisterResponse> Register(RegisterData register)
         {
             var arguments = new object[] { register };

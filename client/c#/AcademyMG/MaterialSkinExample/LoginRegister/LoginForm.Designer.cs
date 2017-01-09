@@ -87,6 +87,7 @@
             this.tf_login_pw.TabIndex = 5;
             this.tf_login_pw.TabStop = false;
             this.tf_login_pw.UseSystemPasswordChar = false;
+            this.tf_login_pw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_login_pw_KeyDown);
             // 
             // tf_login_id
             // 
@@ -105,21 +106,22 @@
             this.tf_login_id.TabIndex = 4;
             this.tf_login_id.TabStop = false;
             this.tf_login_id.UseSystemPasswordChar = false;
+            this.tf_login_id.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_login_id_KeyDown);
             // 
             // materialLabel2
             // 
             this.materialLabel2.Anchor = System.Windows.Forms.AnchorStyles.Left;
-            this.materialLabel2.AutoSize = true;
+            this.materialLabel2.BackColor = System.Drawing.SystemColors.Window;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(100, 180);
+            this.materialLabel2.Location = new System.Drawing.Point(33, 180);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
-            this.materialLabel2.Size = new System.Drawing.Size(0, 19);
+            this.materialLabel2.Size = new System.Drawing.Size(181, 19);
             this.materialLabel2.TabIndex = 9;
+            this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // LoginForm
             // 
