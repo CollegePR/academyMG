@@ -54,9 +54,10 @@ namespace MaterialSkinExample.LoginRegister
                 };
                 var result = await service.Login(login);
 
-                if (result.status == 2)
+                if (result.flag)
                 {
                     //success
+                    materialLabel2.Text = "로그인 되었습니다.";
                 }
                 else
                 {

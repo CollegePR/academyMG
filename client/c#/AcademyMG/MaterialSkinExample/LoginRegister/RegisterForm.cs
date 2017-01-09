@@ -65,6 +65,12 @@ namespace MaterialSkinExample.LoginRegister
             };
 
             var result = await service.Register(register);
+
+            if (result.flag == true)
+            {
+                this.Close();
+            }
+            else this.Close();
         }
     }
 }
