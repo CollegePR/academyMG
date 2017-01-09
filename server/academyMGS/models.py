@@ -94,5 +94,4 @@ class AttendanceCheck(models.Model):
     check = models.BooleanField()
 
     def __str__(self):  # __unicode__ on Python 2
-        return self.student_id.__str__()
-
+      return self.student_id.__str__()

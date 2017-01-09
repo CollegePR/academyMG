@@ -12,5 +12,4 @@ urlpatterns = (
     url(r'^setteacher', setTeacherPage),
     url(r'^attendancecheck', attendanceCheckingPage),
     url(r'^attendancestatus', attendanceStatusPage),
-
 )
