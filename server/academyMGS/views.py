@@ -1,20 +1,42 @@
-from django.shortcuts import render
 from .models import *
 import json
 from django.http import HttpResponse
 from django.views.decorators.csrf import csrf_exempt
-
+from .viewpages import addStudent,login,index,idCheck,register,setStudent,search,accessList,setTeacher,attendanceChecking,attendanceStatus
 @csrf_exempt
-def idCheck(request):
-    data = [{'status':False}]
-    requestId = ""
-    if request.method == 'GET':
-        id = request.GET['id']
-    else:
-        return HttpResponse(json.dumps(data), content_type='application/json')
-
-    data = [{'status':True},{'flag': (Teacher.objects.all().filter(id=requestId) is None)and(True)or(False)}, ]
-    return HttpResponse(json.dumps(data), content_type='application/json')
+def addStudentPage(request):
+    return addStudent.addStudent(request)
 @csrf_exempt
-def index(request):
-    return HttpResponse("don't access", content_type='application/json')
+def loginPage(request):
+    return login.login(request)
+@csrf_exempt
+def indexPage(request):
+    return index.index(request)
+@csrf_exempt
+def idCheckPage(request):
+    return idCheck.idCheck(request)
+@csrf_exempt
+def registerPage(request):
+    return register.register(request)
+@csrf_exempt
+def searchPage(request):
+    return search.search(request)
+@csrf_exempt
+def setStudentPage(request):
+    return setStudent.setStudent(request)
+@csrf_exempt
+def setStudentPage(request):
+    return setStudent.setStudent(request)
+@csrf_exempt
+def accessListPage(request):
+    return accessList.accessList(request)
+@csrf_exempt
+def setTeacherPage(request):
+    return setTeacher.setTeacher(request)
+@csrf_exempt
+def attendanceCheckingPage(request):
+    return attendanceChecking.attendanceChecking(request)
+@csrf_exempt
+def attendanceStatusPage(request):
+    return attendanceStatus.attendanceStatus(request)
+
