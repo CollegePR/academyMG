@@ -38,7 +38,7 @@ namespace MaterialSkinExample.LoginRegister
                 RestResponse<List<Response>> IDcheckResponse = service.IDCheck("test");
 
 
-                materialLabel1.Text = SHA256_Encryptor.SHA256Hash(tf_login_pw.Text);
+                //materialLabel1.Text = SHA256_Encryptor.SHA256Hash(tf_login_pw.Text);
 
                 if (IDcheckResponse.Data[0].flag == true) materialLabel2.Text = "true";
                 else materialLabel2.Text = "false";
