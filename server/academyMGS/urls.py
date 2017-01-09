@@ -10,5 +10,6 @@ urlpatterns = (
     url(r'^setstudent', setStudentPage),
     url(r'^accesslist', accessListPage),
     url(r'^setteacher', setTeacherPage),
-
+    url(r'^attendancecheck', attendanceCheckingPage),
+    url(r'^attendancestatus', attendanceStatusPage),
 )

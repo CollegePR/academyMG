@@ -1,0 +1,9 @@
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Debug\Retrofit.Net.dll
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Debug\Retrofit.Net.pdb
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Debug\Castle.Core.dll
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Debug\RestSharp.dll
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Debug\Castle.Core.xml
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Debug\RestSharp.xml
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\obj\Debug\Retrofit.Net.csprojResolveAssemblyReference.cache
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\obj\Debug\Retrofit.Net.dll
+C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\obj\Debug\Retrofit.Net.pdb
