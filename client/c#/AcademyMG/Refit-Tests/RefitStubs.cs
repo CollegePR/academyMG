@@ -517,10 +517,40 @@ namespace Refit.Tests
             return (Task<SetTeacherResponse>) methodImpls["SetTeacher"](Client, arguments);
         }
 
+        public virtual Task<AdmissionStatusResponse> AdmissionStatus(AdmissionStatusData data)
+        {
+            var arguments = new object[] { data };
+            return (Task<AdmissionStatusResponse>) methodImpls["AdmissionStatus"](Client, arguments);
+        }
+
         public virtual Task<SearchResponse> Search(string search_query)
         {
             var arguments = new object[] { search_query };
             return (Task<SearchResponse>) methodImpls["Search"](Client, arguments);
+        }
+
+        public virtual Task<AccessListResponse> AccessList()
+        {
+            var arguments = new object[] {  };
+            return (Task<AccessListResponse>) methodImpls["AccessList"](Client, arguments);
+        }
+
+        public virtual Task<AttendanceCheckResponse> AttendanceCheck(AttendanceCheckData acdata)
+        {
+            var arguments = new object[] { acdata };
+            return (Task<AttendanceCheckResponse>) methodImpls["AttendanceCheck"](Client, arguments);
+        }
+
+        public virtual Task<AttendanceStatusResponse> AttendanceStatus(AttendanceStatusData asdata)
+        {
+            var arguments = new object[] { asdata };
+            return (Task<AttendanceStatusResponse>) methodImpls["AttendanceStatus"](Client, arguments);
+        }
+
+        public virtual Task<ClassListResponse> ClassList()
+        {
+            var arguments = new object[] {  };
+            return (Task<ClassListResponse>) methodImpls["ClassList"](Client, arguments);
         }
 
     }

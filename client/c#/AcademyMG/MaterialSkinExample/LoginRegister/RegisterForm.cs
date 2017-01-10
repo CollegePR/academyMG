@@ -31,7 +31,7 @@ namespace MaterialSkinExample.LoginRegister
         public bool pw_check_result = false;
         public bool pwcmp_check_result = false;
         public bool name_check_result = false;
-        public bool class_check_result = true;
+        public bool class_check_result = false;
 
         public class InputCheck
         {
@@ -51,17 +51,33 @@ namespace MaterialSkinExample.LoginRegister
 
         private void tf_register_class_Click(object sender, EventArgs e)
         {
-            
+            SelectClassForm selectclassForm = new SelectClassForm(tf_register_class);
+            selectclassForm.ShowDialog();
         }
         
         private void SubmitButton_Click(object sender, EventArgs e)
         {
-            pw_check_process();
-            pwcmp_check_process();
-            name_check_process();
-
-            if (pw_check_result && pwcmp_check_result && name_check_result && class_check_result) register_process();
-            else materialLabel6.Text = "회원가입 실패[2]";
+            if (!id_check_result) materialLabel6.Text = "아이디 중복 오류";
+            else
+            {
+                if (!pw_check_result) materialLabel6.Text = "패스워드 오류";
+                else
+                {
+                    if (!pwcmp_check_result) materialLabel6.Text = "패스워드 확인 오류";
+                    else
+                    {
+                        if (!name_check_result) materialLabel6.Text = "이름 오류";
+                        else
+                        {
+                            if (!class_check_result) materialLabel6.Text = "학급명 오류";
+                            else
+                            {
+                                register_process();
+                            }
+                        }
+                    }
+                }
+            }
         }
 
         private void tf_register_id_KeyDown(object sender, KeyEventArgs e)
@@ -70,6 +86,11 @@ namespace MaterialSkinExample.LoginRegister
         }
 
         private void tf_register_id_KeyUp(object sender, KeyEventArgs e)
+        {
+            id_check_process();
+        }
+
+        private void tf_register_id_Leave(object sender, EventArgs e)
         {
             id_check_process();
         }
@@ -94,6 +115,11 @@ namespace MaterialSkinExample.LoginRegister
             pwcmp_check_process();
         }
 
+        private void tf_register_pwcmp_Leave(object sender, EventArgs e)
+        {
+            pwcmp_check_process();
+        }
+        
         private void tf_register_name_KeyDown(object sender, KeyEventArgs e)
         {
             name_check_process();
@@ -156,6 +182,12 @@ namespace MaterialSkinExample.LoginRegister
             name_check_result = false;
             materialLabel2.Text = "사용가능한 이름입니다.";
             name_check_result = true;
+        }
+
+        private void class_check_process()
+        {
+            class_check_result = false;
+            if (tf_register_class.Text.Length != 0) class_check_result = true;
         }
 
         private async void register_process()
@@ -221,6 +253,20 @@ namespace MaterialSkinExample.LoginRegister
             return new InputCheck { flag = flag, err_msg = msg };
         }
 
-        
+        private void tf_register_class_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            e.Handled = true;
+        }
+
+        private void tf_register_class_Enter(object sender, EventArgs e)
+        {
+            SelectClassForm selectclassForm = new SelectClassForm(tf_register_class);
+            selectclassForm.ShowDialog();
+        }
+
+        private void tf_register_class_Leave(object sender, EventArgs e)
+        {
+            class_check_process();
+        }
     }
 }

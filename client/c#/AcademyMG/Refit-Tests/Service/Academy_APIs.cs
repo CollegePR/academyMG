@@ -63,6 +63,17 @@ namespace Refit.Tests
         public bool flag { get; set; }
         public string data { get; set; }
     }
+
+    public class AdmissionStatusResponse
+    {
+        public bool flag { get; set; }
+    }
+
+    public class ClassListResponse
+    {
+        public bool flag { get; set; }
+        public ClassListSubData[] data { get; set; }
+    }
     #endregion
 
 
@@ -180,6 +191,15 @@ namespace Refit.Tests
         [AliasAs("id")]
         public int id { get; set; }
     }
+
+    public class AdmissionStatusData
+    {
+        [AliasAs("id")]
+        public string id { get; set; }
+
+        [AliasAs("status")]
+        public int status { get; set; }
+    }
     #endregion
 
     #region SubData
@@ -214,6 +234,12 @@ namespace Refit.Tests
         public string id { get; set; }
         public int academy_class { get; set; }
     }
+
+    public class ClassListSubData
+    {
+        public string name { get; set; }
+        public int id { get; set; }
+    }
     #endregion
 
 
@@ -244,6 +270,10 @@ namespace Refit.Tests
         [Post("/api/setteacher")]
         Task<SetTeacherResponse> SetTeacher([Body(BodySerializationMethod.UrlEncoded)] SetTeacherData teacher);
 
+        //Status Admission
+        [Post("/api/setteacher")]
+        Task<AdmissionStatusResponse> AdmissionStatus([Body(BodySerializationMethod.UrlEncoded)] AdmissionStatusData data);
+
         //Search
         [Get("/api/search")]
         Task<SearchResponse> Search(string search_query);
@@ -259,5 +289,8 @@ namespace Refit.Tests
         //AttendanceStatus
         [Post("/api/attendancestatus")]
         Task<AttendanceStatusResponse> AttendanceStatus([Body(BodySerializationMethod.UrlEncoded)] AttendanceStatusData asdata);
+
+        [Get("/api/classlist")]
+        Task<ClassListResponse> ClassList();
     }
 }

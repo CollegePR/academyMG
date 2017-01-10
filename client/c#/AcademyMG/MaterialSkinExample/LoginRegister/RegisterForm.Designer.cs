@@ -56,7 +56,7 @@
             this.SubmitButton.Name = "SubmitButton";
             this.SubmitButton.Primary = true;
             this.SubmitButton.Size = new System.Drawing.Size(51, 36);
-            this.SubmitButton.TabIndex = 10;
+            this.SubmitButton.TabIndex = 11;
             this.SubmitButton.Text = "가입";
             this.SubmitButton.UseVisualStyleBackColor = true;
             this.SubmitButton.Click += new System.EventHandler(this.SubmitButton_Click);
@@ -84,7 +84,6 @@
             // 
             this.tf_register_class.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tf_register_class.Depth = 0;
-            this.tf_register_class.Enabled = false;
             this.tf_register_class.Hint = "학급명";
             this.tf_register_class.Location = new System.Drawing.Point(12, 254);
             this.tf_register_class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -100,6 +99,9 @@
             this.tf_register_class.TabStop = false;
             this.tf_register_class.UseSystemPasswordChar = false;
             this.tf_register_class.Click += new System.EventHandler(this.tf_register_class_Click);
+            this.tf_register_class.Enter += new System.EventHandler(this.tf_register_class_Enter);
+            this.tf_register_class.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tf_register_class_KeyPress);
+            this.tf_register_class.Leave += new System.EventHandler(this.tf_register_class_Leave);
             // 
             // tf_register_pwcmp
             // 
@@ -120,6 +122,7 @@
             this.tf_register_pwcmp.UseSystemPasswordChar = false;
             this.tf_register_pwcmp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_pwcmp_KeyDown);
             this.tf_register_pwcmp.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tf_register_pwcmp_KeyUp);
+            this.tf_register_pwcmp.Leave += new System.EventHandler(this.tf_register_pwcmp_Leave);
             // 
             // tf_register_pw
             // 
@@ -160,6 +163,7 @@
             this.tf_register_id.UseSystemPasswordChar = false;
             this.tf_register_id.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_id_KeyDown);
             this.tf_register_id.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tf_register_id_KeyUp);
+            this.tf_register_id.Leave += new System.EventHandler(this.tf_register_id_Leave);
             // 
             // materialRaisedButton1
             // 
@@ -174,7 +178,7 @@
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
             this.materialRaisedButton1.Size = new System.Drawing.Size(51, 36);
-            this.materialRaisedButton1.TabIndex = 11;
+            this.materialRaisedButton1.TabIndex = 12;
             this.materialRaisedButton1.Text = "취소";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
             this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);

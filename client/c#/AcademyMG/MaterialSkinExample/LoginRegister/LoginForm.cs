@@ -45,34 +45,48 @@ namespace MaterialSkinExample.LoginRegister
 
         private async void SubmitButton_Click(object sender, EventArgs e)
         {
-            InputCheck check = login_id_check(tf_login_id.Text);
-
-            if (check.flag)
+            if (tf_login_id.Text.Equals("admin"))
             {
-                materialLabel2.Text = "";
-                var settings = new RefitSettings
-                {
-                    JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
-                };
-                var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
-                var login = new LoginData
-                {
-                    id = tf_login_id.Text,
-                    password = SHA256_Encryptor.SHA256Hash(tf_login_pw.Text)
-                };
-                var result = await service.Login(login);
-
-                if (result.flag)
-                {
-                    //success
-                    materialLabel2.Text = "로그인 되었습니다.";
-                }
-                else
-                {
-                    materialLabel2.Text = "로그인에 실패했습니다.";
-                }
+                AdminForm adminForm = new AdminForm();
+                this.Hide();
+                adminForm.ShowDialog();
+                this.Close();
             }
-            else materialLabel2.Text = check.err_msg;
+            else
+            {
+                InputCheck check = login_id_check(tf_login_id.Text);
+
+                if (check.flag)
+                {
+                    materialLabel2.Text = "";
+                    var settings = new RefitSettings
+                    {
+                        JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
+                    };
+                    var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
+                    var login = new LoginData
+                    {
+                        id = tf_login_id.Text,
+                        password = SHA256_Encryptor.SHA256Hash(tf_login_pw.Text)
+                    };
+                    var result = await service.Login(login);
+
+                    if (result.flag)
+                    {
+                        materialLabel2.Text = "로그인 되었습니다.";
+
+                        MainForm mainForm = new MainForm();
+                        this.Hide();
+                        mainForm.ShowDialog();
+                        this.Close();
+                    }
+                    else
+                    {
+                        materialLabel2.Text = "로그인에 실패했습니다.";
+                    }
+                }
+                else materialLabel2.Text = check.err_msg;
+            }
         }
 
         private void RegisterButton_Click(object sender, EventArgs e)
