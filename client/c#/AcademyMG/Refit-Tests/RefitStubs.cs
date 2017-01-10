@@ -481,6 +481,12 @@ namespace Refit.Tests
             Client = client;
         }
 
+        public virtual Task<IDCheckResponse> IDCheck(string id)
+        {
+            var arguments = new object[] { id };
+            return (Task<IDCheckResponse>) methodImpls["IDCheck"](Client, arguments);
+        }
+
         public virtual Task<LoginResponse> Login(LoginData login)
         {
             var arguments = new object[] { login };
@@ -491,6 +497,30 @@ namespace Refit.Tests
         {
             var arguments = new object[] { register };
             return (Task<RegisterResponse>) methodImpls["Register"](Client, arguments);
+        }
+
+        public virtual Task<AddStudentResponse> AddStudent(AddStudentData student)
+        {
+            var arguments = new object[] { student };
+            return (Task<AddStudentResponse>) methodImpls["AddStudent"](Client, arguments);
+        }
+
+        public virtual Task<SetStudentResponse> SetStudent(SetStudentData student)
+        {
+            var arguments = new object[] { student };
+            return (Task<SetStudentResponse>) methodImpls["SetStudent"](Client, arguments);
+        }
+
+        public virtual Task<SetTeacherResponse> SetTeacher(SetTeacherData teacher)
+        {
+            var arguments = new object[] { teacher };
+            return (Task<SetTeacherResponse>) methodImpls["SetTeacher"](Client, arguments);
+        }
+
+        public virtual Task<SearchResponse> Search(string search_query)
+        {
+            var arguments = new object[] { search_query };
+            return (Task<SearchResponse>) methodImpls["Search"](Client, arguments);
         }
 
     }

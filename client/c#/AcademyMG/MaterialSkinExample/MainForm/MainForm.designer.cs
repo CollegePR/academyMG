@@ -613,6 +613,7 @@ namespace MaterialSkinExample
             this.rb_addstudent_submit.TabIndex = 3;
             this.rb_addstudent_submit.Text = "원생추가";
             this.rb_addstudent_submit.UseVisualStyleBackColor = true;
+            this.rb_addstudent_submit.Click += new System.EventHandler(this.rb_addstudent_submit_Click);
             // 
             // lb_addstudent_sex
             // 

@@ -52,23 +52,23 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Castle.Core">
-      <HintPath>..\packages\Castle.Core.3.2.1\lib\net45\Castle.Core.dll</HintPath>
+      <HintPath>..\..\AcademyMG-Client\Retrofit.Net\bin\Debug\Castle.Core.dll</HintPath>
     </Reference>
     <Reference Include="FluentAssertions">
-      <HintPath>..\packages\FluentAssertions.2.1.0.0\lib\net45\FluentAssertions.dll</HintPath>
+      <HintPath>..\..\AcademyMG-Client\packages\FluentAssertions.2.1.0.0\lib\net45\FluentAssertions.dll</HintPath>
     </Reference>
     <Reference Include="Newtonsoft.Json, Version=9.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\Newtonsoft.Json.dll</HintPath>
+      <HintPath>..\Refit\bin\Debug\Net45\Newtonsoft.Json.dll</HintPath>
     </Reference>
     <Reference Include="NSubstitute">
-      <HintPath>..\packages\NSubstitute.1.6.1.0\lib\NET40\NSubstitute.dll</HintPath>
+      <HintPath>..\..\AcademyMG-Client\packages\NSubstitute.1.6.1.0\lib\NET40\NSubstitute.dll</HintPath>
     </Reference>
     <Reference Include="nunit.framework">
-      <HintPath>..\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
+      <HintPath>..\..\AcademyMG-Client\packages\NUnit.2.6.3\lib\nunit.framework.dll</HintPath>
     </Reference>
     <Reference Include="RestSharp">
-      <HintPath>..\packages\RestSharp.104.3.3\lib\net4\RestSharp.dll</HintPath>
+      <HintPath>..\..\AcademyMG-Client\packages\RestSharp.104.3.3\lib\net4\RestSharp.dll</HintPath>
     </Reference>
     <Reference Include="RichardSzalay.MockHttp">
       <HintPath>..\Refit-Tests\bin\Debug\RichardSzalay.MockHttp.dll</HintPath>
@@ -92,19 +92,19 @@
     <Reference Include="System.Xml" />
     <Reference Include="xunit.abstractions, Version=2.0.0.0, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\xunit.abstractions.dll</HintPath>
+      <HintPath>..\Refit-Tests\bin\Debug\xunit.abstractions.dll</HintPath>
     </Reference>
     <Reference Include="xunit.assert, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\xunit.assert.dll</HintPath>
+      <HintPath>..\Refit-Tests\bin\Debug\xunit.assert.dll</HintPath>
     </Reference>
     <Reference Include="xunit.core, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\xunit.core.dll</HintPath>
+      <HintPath>..\Refit-Tests\bin\Debug\xunit.core.dll</HintPath>
     </Reference>
     <Reference Include="xunit.execution.desktop, Version=2.1.0.3179, Culture=neutral, PublicKeyToken=8d05b1bb7a6fdb6c, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
-      <HintPath>bin\Debug\xunit.execution.desktop.dll</HintPath>
+      <HintPath>..\Refit-Tests\bin\Debug\xunit.execution.desktop.dll</HintPath>
     </Reference>
   </ItemGroup>
   <ItemGroup>
@@ -223,7 +223,9 @@
       <Install>false</Install>
     </BootstrapperPackage>
   </ItemGroup>
-  <ItemGroup />
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
