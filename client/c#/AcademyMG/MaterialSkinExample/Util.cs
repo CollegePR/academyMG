@@ -1,5 +1,6 @@
 ﻿using ToastNotifications;
 using MaterialSkinExample.ShowDialog;
+using MaterialSkinExample.DateSelect;
 
 namespace MaterialSkinExample
 {
@@ -27,6 +28,19 @@ namespace MaterialSkinExample
         {
             Notification NotifyForm = new Notification("", Text, 5, FormAnimator.AnimationMethod.Slide, FormAnimator.AnimationDirection.Up);
             NotifyForm.Show();
+        }
+
+        public static string SelectDate()
+        {
+            string SelectDate = null;
+            DateSelectForm dateSelectForm = new DateSelectForm();
+            dateSelectForm.ShowDialog();
+            SelectDate = dateSelectForm.SelectedDate;
+
+            if (SelectDate == null)
+                return null;
+            else
+                return SelectDate;
         }
     }
 }

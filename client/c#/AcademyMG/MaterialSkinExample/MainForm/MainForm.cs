@@ -27,6 +27,8 @@ namespace MaterialSkinExample
 {
     public partial class MainForm : MaterialForm
     {
+        private bool Addstudent_sex;
+
         private readonly MaterialSkinManager materialSkinManager;
         public MainForm()
         {
@@ -56,9 +58,15 @@ namespace MaterialSkinExample
         private void lb_renewstudent_sex_Click(object sender, EventArgs e) // 원생 갱신
         {
             if (lb_addstudent_sex.Text == "남")
+            {
                 lb_addstudent_sex.Text = "여";
+                Addstudent_sex = false;
+            }
             else
+            {
                 lb_addstudent_sex.Text = "남";
+                Addstudent_sex = true;
+            }
         }
 
         private async void rb_addstudent_submit_Click(object sender, EventArgs e)
@@ -68,16 +76,17 @@ namespace MaterialSkinExample
                 JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
             };
 
-            var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:8000/api/addstudent", settings);
+            var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
 
             var add = new AddStudentData
             {
-                sex = true,
-                phone_num = "010-1234-4567",
-                address = "서울시 홍길동 뽀로로",
-                school_name = "대건 초등학교",
-                school_class =  "1반",
-                grade = 6,
+                name = tf_addstudent_name.Text,
+                sex = Addstudent_sex,
+                phone_num = tf_addstudent_phone.Text,
+                address = tf_addstudent_address.Text,
+                school_name = tf_addstudent_schoolname.Text,
+                school_class =  int.Parse(tf_addstudent_schoolname.Text),
+                grade = int.Parse(tf_addstudent_grade.Text),
                 sos = 1
             };
 
@@ -88,6 +97,11 @@ namespace MaterialSkinExample
                 this.Close();
             }
             else this.Close();
+        }
+
+        private void tf_addstudent_joindate_Click(object sender, EventArgs e)
+        {
+            tf_addstudent_joindate.Text=Util.SelectDate();
         }
     }
 }

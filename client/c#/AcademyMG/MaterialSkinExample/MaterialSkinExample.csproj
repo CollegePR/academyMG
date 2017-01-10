@@ -108,6 +108,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DateSelect\DateSelectForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DateSelect\DateSelectForm.Designer.cs">
+      <DependentUpon>DateSelectForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Encryptor\SHA256_Encryptor.cs" />
     <Compile Include="MainForm\MainForm.cs">
       <SubType>Form</SubType>
@@ -150,6 +156,9 @@
       <DependentUpon>ShowDialogForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Util.cs" />
+    <EmbeddedResource Include="DateSelect\DateSelectForm.resx">
+      <DependentUpon>DateSelectForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="LoginRegister\LoginForm.resx">
       <DependentUpon>LoginForm.cs</DependentUpon>
     </EmbeddedResource>

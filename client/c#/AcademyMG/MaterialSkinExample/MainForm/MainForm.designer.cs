@@ -62,7 +62,6 @@ namespace MaterialSkinExample
             this.tf_addstudent_schoolname = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tf_addstudent_address = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tf_addstudent_rejoindate = new MaterialSkin.Controls.MaterialSingleLineTextField();
-            this.tf_addstudent_joindate = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tf_addstudent_phone = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tf_addstudent_name = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.rb_addstudent_submit = new MaterialSkin.Controls.MaterialRaisedButton();
@@ -94,6 +93,7 @@ namespace MaterialSkinExample
             this.item2ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
+            this.tf_addstudent_joindate = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.rb_attend_submit.SuspendLayout();
             this.mainpage.SuspendLayout();
             this.addstudentpage.SuspendLayout();
@@ -390,6 +390,7 @@ namespace MaterialSkinExample
             // addstudentpage
             // 
             this.addstudentpage.BackColor = System.Drawing.Color.White;
+            this.addstudentpage.Controls.Add(this.tf_addstudent_joindate);
             this.addstudentpage.Controls.Add(this.tf_addstudent_birthday);
             this.addstudentpage.Controls.Add(this.tf_addstudent_lecture);
             this.addstudentpage.Controls.Add(this.tf_addstudent_outdate);
@@ -398,7 +399,6 @@ namespace MaterialSkinExample
             this.addstudentpage.Controls.Add(this.tf_addstudent_schoolname);
             this.addstudentpage.Controls.Add(this.tf_addstudent_address);
             this.addstudentpage.Controls.Add(this.tf_addstudent_rejoindate);
-            this.addstudentpage.Controls.Add(this.tf_addstudent_joindate);
             this.addstudentpage.Controls.Add(this.tf_addstudent_phone);
             this.addstudentpage.Controls.Add(this.tf_addstudent_name);
             this.addstudentpage.Controls.Add(this.rb_addstudent_submit);
@@ -547,23 +547,6 @@ namespace MaterialSkinExample
             this.tf_addstudent_rejoindate.TabIndex = 7;
             this.tf_addstudent_rejoindate.TabStop = false;
             this.tf_addstudent_rejoindate.UseSystemPasswordChar = false;
-            // 
-            // tf_addstudent_joindate
-            // 
-            this.tf_addstudent_joindate.Depth = 0;
-            this.tf_addstudent_joindate.Hint = "입학일자";
-            this.tf_addstudent_joindate.Location = new System.Drawing.Point(420, 7);
-            this.tf_addstudent_joindate.MaxLength = 32767;
-            this.tf_addstudent_joindate.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tf_addstudent_joindate.Name = "tf_addstudent_joindate";
-            this.tf_addstudent_joindate.PasswordChar = '\0';
-            this.tf_addstudent_joindate.SelectedText = "";
-            this.tf_addstudent_joindate.SelectionLength = 0;
-            this.tf_addstudent_joindate.SelectionStart = 0;
-            this.tf_addstudent_joindate.Size = new System.Drawing.Size(353, 28);
-            this.tf_addstudent_joindate.TabIndex = 6;
-            this.tf_addstudent_joindate.TabStop = false;
-            this.tf_addstudent_joindate.UseSystemPasswordChar = false;
             // 
             // tf_addstudent_phone
             // 
@@ -1005,6 +988,24 @@ namespace MaterialSkinExample
             this.item3ToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.item3ToolStripMenuItem.Text = "Item 3";
             // 
+            // tf_addstudent_joindate
+            // 
+            this.tf_addstudent_joindate.Depth = 0;
+            this.tf_addstudent_joindate.Hint = "입학일자";
+            this.tf_addstudent_joindate.Location = new System.Drawing.Point(421, 8);
+            this.tf_addstudent_joindate.MaxLength = 32767;
+            this.tf_addstudent_joindate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tf_addstudent_joindate.Name = "tf_addstudent_joindate";
+            this.tf_addstudent_joindate.PasswordChar = '\0';
+            this.tf_addstudent_joindate.SelectedText = "";
+            this.tf_addstudent_joindate.SelectionLength = 0;
+            this.tf_addstudent_joindate.SelectionStart = 0;
+            this.tf_addstudent_joindate.Size = new System.Drawing.Size(352, 28);
+            this.tf_addstudent_joindate.TabIndex = 15;
+            this.tf_addstudent_joindate.TabStop = false;
+            this.tf_addstudent_joindate.UseSystemPasswordChar = false;
+            this.tf_addstudent_joindate.Click += new System.EventHandler(this.tf_addstudent_joindate_Click);
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -1067,7 +1068,6 @@ namespace MaterialSkinExample
         private MaterialSingleLineTextField tf_addstudent_schoolname;
         private MaterialSingleLineTextField tf_addstudent_address;
         private MaterialSingleLineTextField tf_addstudent_rejoindate;
-        private MaterialSingleLineTextField tf_addstudent_joindate;
         private MaterialSingleLineTextField tf_addstudent_phone;
         private MaterialSingleLineTextField tf_addstudent_birthday;
         private MaterialLabel materialLabel1;
@@ -1096,5 +1096,6 @@ namespace MaterialSkinExample
         private MaterialLabel lb_mainpage_rejoindate;
         private MaterialLabel lb_mainpage_birthday;
         private MaterialLabel lb_mainpage_lecture;
+        private MaterialSingleLineTextField tf_addstudent_joindate;
     }
 }
