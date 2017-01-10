@@ -1,7 +1,7 @@
 from academyMGS.models import *
 import json
 from django.http import HttpResponse
-
+import datetime
 
 def setStudent(request):
     data = {'flag': False}
