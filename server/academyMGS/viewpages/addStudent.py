@@ -4,7 +4,7 @@ from django.http import HttpResponse
 
 
 def addStudent(request):
-    data = [{'status': False, 'flag': False}]
+    data = [{'flag': False}]
     name = ""
     sex = True
     phone_num = ""
@@ -12,9 +12,11 @@ def addStudent(request):
     school_name = ""
     grade = 0
     school_class = 0
-    status_of_sign = 2
-
-
+    status_of_sign = 0
+    date_of_admission = ""
+    date_of_readdmission = ""
+    date_of_exit = ""
+    birthday = ""
     try:
         if request.method == "POST":
             name = request.POST.get('name')
@@ -25,18 +27,13 @@ def addStudent(request):
             grade = request.POST.get('grade')
             school_class = request.POST.get('school_class')
             status_of_sign = request.POST.get('status_of_sign')
-            print(name)
-            print(sex)
-            print(phone_num)
-            print(address)
-            print(school_name)
-            print (school_class)
-            print (grade)
-            print (status_of_sign)
+            date_of_admission = request.POST.get('date_of_admission')
+            date_of_readdmission = request.POST.get('date_of_readdmission')
+            date_of_exit = request.POST.get('date_of_exit')
+            birthday = request.POST.get('birthday')
 
 
         else:
-            print("try문 else문진입")
             return HttpResponse(json.dumps(data), content_type='application/json')
 
         student = Student(
@@ -48,13 +45,14 @@ def addStudent(request):
             school_class=school_class,
             grade=grade,
             status_of_sign=status_of_sign,
-
-
+            date_of_admission = date_of_admission,
+            date_of_readdmission = date_of_readdmission,
+            date_of_exit = date_of_exit,
+            birthday = birthday,
         )
         student.save()
-        data = [{'status': True, 'flag': True}]
+        data = [{'flag': True}]
     except:
-        print("예외문진입")
         return HttpResponse(json.dumps(data), content_type='application/json')
 
     return HttpResponse(json.dumps(data), content_type='application/json')
