@@ -261,3 +261,4 @@ namespace Refit.Tests
         Task<AttendanceStatusResponse> AttendanceStatus([Body(BodySerializationMethod.UrlEncoded)] AttendanceStatusData asdata);
     }
 }
+

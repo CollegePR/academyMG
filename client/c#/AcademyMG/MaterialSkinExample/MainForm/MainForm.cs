@@ -46,7 +46,7 @@ namespace MaterialSkinExample
         {
 
         }
-
+        
         private void lb_addstudent_sex_Click(object sender, EventArgs e) // 원생 추가
         {
             if (lb_addstudent_sex.Text == "남")
@@ -85,7 +85,7 @@ namespace MaterialSkinExample
                 phone_num = tf_addstudent_phone.Text,
                 address = tf_addstudent_address.Text,
                 school_name = tf_addstudent_schoolname.Text,
-                school_class =  int.Parse(tf_addstudent_schoolname.Text),
+                school_class =  int.Parse(tf_addstudent_schoolclass.Text),
                 grade = int.Parse(tf_addstudent_grade.Text),
                 sos = 1
             };
@@ -103,5 +103,128 @@ namespace MaterialSkinExample
         {
             tf_addstudent_joindate.Text=Util.SelectDate();
         }
+
+        private void tf_addstudent_rejoindate_Click(object sender, EventArgs e)
+        {
+            tf_addstudent_rejoindate.Text = Util.SelectDate();
+        }
+
+        private void tf_addstudent_outdate_Click(object sender, EventArgs e)
+        {
+            tf_addstudent_outdate.Text = Util.SelectDate();
+        }
+
+        private void tf_addstudent_birthday_Click(object sender, EventArgs e)
+        {
+            tf_addstudent_birthday.Text = Util.SelectDate();
+        }
+
+        private void tf_addstudent_joindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_addstudent_rejoindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_addstudent_outdate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_addstudent_birthday_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_joindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_rejoindate_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_rejoindate.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_joindate_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_joindate.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_outdate_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_outdate.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_birthday_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_birthday.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_rejoindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_outdate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_birthday_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+            }
+        }
+
+        private async void tf_mainpage_search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                var settings = new RefitSettings
+                {
+                    JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
+                };
+
+                var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
+
+                var result = await service.Search(tf_mainpage_search.Text);
+
+                if (result.flag)
+                {
+                    if (result.count == 1)
+                    {
+                        lb_mainpage_phone.Text = "전화번호" + result.data[0].phone_num;
+                        lb_mainpage_address.Text = result.data[0].address;
+                        lb_mainpage_school.Text = result.data[0].school_name;
+                        lb_mainpage_grade.Text = result.data[0].grade.ToString();
+                        lb_mainpage_shoolclass.Text = result.data[0].school_class.ToString();
+                        lb_mainpage_join.Text = result.data[0].date_of_admission;
+                        lb_mainpage_rejoindate.Text = result.data[0].date_of_readdmission;
+                        lb_mainpage_outdate.Text = result.data[0].date_of_exit;
+                    }
+                    else
+                    {
+                        //다이얼로그 띄우기
+                    }
+                }
+
+                else
+                {
+
+                }
+            }
+        }
+        
     }
 }
