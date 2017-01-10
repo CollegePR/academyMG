@@ -1,8 +1,0 @@
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Release\Retrofit.Net.dll
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Release\Retrofit.Net.pdb
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Release\Castle.Core.dll
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Release\RestSharp.dll
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Release\Castle.Core.xml
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\bin\Release\RestSharp.xml
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\obj\Release\Retrofit.Net.dll
-C:\Users\user\Desktop\collegeProject\academyMG\client\c#\AcademyMG-Client\Retrofit.Net\obj\Release\Retrofit.Net.pdb
