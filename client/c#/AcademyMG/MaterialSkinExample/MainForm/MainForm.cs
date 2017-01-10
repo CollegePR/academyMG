@@ -46,7 +46,7 @@ namespace MaterialSkinExample
         {
 
         }
-
+        
         private void lb_addstudent_sex_Click(object sender, EventArgs e) // 원생 추가
         {
             if (lb_addstudent_sex.Text == "남")
@@ -85,7 +85,7 @@ namespace MaterialSkinExample
                 phone_num = tf_addstudent_phone.Text,
                 address = tf_addstudent_address.Text,
                 school_name = tf_addstudent_schoolname.Text,
-                school_class =  int.Parse(tf_addstudent_schoolname.Text),
+                school_class =  int.Parse(tf_addstudent_schoolclass.Text),
                 grade = int.Parse(tf_addstudent_grade.Text),
                 sos = 1
             };
@@ -102,6 +102,89 @@ namespace MaterialSkinExample
         private void tf_addstudent_joindate_Click(object sender, EventArgs e)
         {
             tf_addstudent_joindate.Text=Util.SelectDate();
+        }
+
+        private void tf_addstudent_rejoindate_Click(object sender, EventArgs e)
+        {
+            tf_addstudent_rejoindate.Text = Util.SelectDate();
+        }
+
+        private void tf_addstudent_outdate_Click(object sender, EventArgs e)
+        {
+            tf_addstudent_outdate.Text = Util.SelectDate();
+        }
+
+        private void tf_addstudent_birthday_Click(object sender, EventArgs e)
+        {
+            tf_addstudent_birthday.Text = Util.SelectDate();
+        }
+
+        private void tf_addstudent_joindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_addstudent_rejoindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_addstudent_outdate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_addstudent_birthday_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_joindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_rejoindate_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_rejoindate.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_joindate_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_joindate.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_outdate_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_outdate.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_birthday_Click(object sender, EventArgs e)
+        {
+            tf_renewstudent_birthday.Text = Util.SelectDate();
+        }
+
+        private void tf_renewstudent_rejoindate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_outdate_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_birthday_KeyDown(object sender, KeyEventArgs e)
+        {
+            e.SuppressKeyPress = true;
+        }
+
+        private void tf_renewstudent_search_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter)
+            {
+                
+            }
         }
     }
 }

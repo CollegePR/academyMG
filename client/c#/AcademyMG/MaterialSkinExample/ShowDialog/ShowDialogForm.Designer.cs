@@ -34,6 +34,7 @@
             // lb_showdialog_text
             // 
             this.lb_showdialog_text.AutoSize = true;
+            this.lb_showdialog_text.BackColor = System.Drawing.Color.Transparent;
             this.lb_showdialog_text.Depth = 0;
             this.lb_showdialog_text.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_showdialog_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));

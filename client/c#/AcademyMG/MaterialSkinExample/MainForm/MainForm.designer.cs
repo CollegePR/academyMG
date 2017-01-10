@@ -54,6 +54,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_id = new MaterialSkin.Controls.MaterialLabel();
             this.dv_mainpage_image = new MaterialSkin.Controls.MaterialDivider();
             this.addstudentpage = new System.Windows.Forms.TabPage();
+            this.tf_addstudent_joindate = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tf_addstudent_birthday = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tf_addstudent_lecture = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.tf_addstudent_outdate = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -93,7 +94,6 @@ namespace MaterialSkinExample
             this.item2ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.item3ToolStripMenuItem = new MaterialSkin.Controls.MaterialToolStripMenuItem();
-            this.tf_addstudent_joindate = new MaterialSkin.Controls.MaterialSingleLineTextField();
             this.rb_attend_submit.SuspendLayout();
             this.mainpage.SuspendLayout();
             this.addstudentpage.SuspendLayout();
@@ -412,6 +412,25 @@ namespace MaterialSkinExample
             this.addstudentpage.TabIndex = 1;
             this.addstudentpage.Text = "원생추가";
             // 
+            // tf_addstudent_joindate
+            // 
+            this.tf_addstudent_joindate.Depth = 0;
+            this.tf_addstudent_joindate.Hint = "입학일자";
+            this.tf_addstudent_joindate.Location = new System.Drawing.Point(421, 8);
+            this.tf_addstudent_joindate.MaxLength = 32767;
+            this.tf_addstudent_joindate.MouseState = MaterialSkin.MouseState.HOVER;
+            this.tf_addstudent_joindate.Name = "tf_addstudent_joindate";
+            this.tf_addstudent_joindate.PasswordChar = '\0';
+            this.tf_addstudent_joindate.SelectedText = "";
+            this.tf_addstudent_joindate.SelectionLength = 0;
+            this.tf_addstudent_joindate.SelectionStart = 0;
+            this.tf_addstudent_joindate.Size = new System.Drawing.Size(352, 28);
+            this.tf_addstudent_joindate.TabIndex = 15;
+            this.tf_addstudent_joindate.TabStop = false;
+            this.tf_addstudent_joindate.UseSystemPasswordChar = false;
+            this.tf_addstudent_joindate.Click += new System.EventHandler(this.tf_addstudent_joindate_Click);
+            this.tf_addstudent_joindate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_addstudent_joindate_KeyDown);
+            // 
             // tf_addstudent_birthday
             // 
             this.tf_addstudent_birthday.Depth = 0;
@@ -428,6 +447,8 @@ namespace MaterialSkinExample
             this.tf_addstudent_birthday.TabIndex = 14;
             this.tf_addstudent_birthday.TabStop = false;
             this.tf_addstudent_birthday.UseSystemPasswordChar = false;
+            this.tf_addstudent_birthday.Click += new System.EventHandler(this.tf_addstudent_birthday_Click);
+            this.tf_addstudent_birthday.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_addstudent_birthday_KeyDown);
             // 
             // tf_addstudent_lecture
             // 
@@ -462,6 +483,8 @@ namespace MaterialSkinExample
             this.tf_addstudent_outdate.TabIndex = 12;
             this.tf_addstudent_outdate.TabStop = false;
             this.tf_addstudent_outdate.UseSystemPasswordChar = false;
+            this.tf_addstudent_outdate.Click += new System.EventHandler(this.tf_addstudent_outdate_Click);
+            this.tf_addstudent_outdate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_addstudent_outdate_KeyDown);
             // 
             // tf_addstudent_schoolclass
             // 
@@ -547,6 +570,8 @@ namespace MaterialSkinExample
             this.tf_addstudent_rejoindate.TabIndex = 7;
             this.tf_addstudent_rejoindate.TabStop = false;
             this.tf_addstudent_rejoindate.UseSystemPasswordChar = false;
+            this.tf_addstudent_rejoindate.Click += new System.EventHandler(this.tf_addstudent_rejoindate_Click);
+            this.tf_addstudent_rejoindate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_addstudent_rejoindate_KeyDown);
             // 
             // tf_addstudent_phone
             // 
@@ -665,6 +690,8 @@ namespace MaterialSkinExample
             this.tf_renewstudent_birthday.TabIndex = 28;
             this.tf_renewstudent_birthday.TabStop = false;
             this.tf_renewstudent_birthday.UseSystemPasswordChar = false;
+            this.tf_renewstudent_birthday.Click += new System.EventHandler(this.tf_renewstudent_birthday_Click);
+            this.tf_renewstudent_birthday.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_renewstudent_birthday_KeyDown);
             // 
             // tf_renewstudent_lecture
             // 
@@ -699,6 +726,8 @@ namespace MaterialSkinExample
             this.tf_renewstudent_outdate.TabIndex = 26;
             this.tf_renewstudent_outdate.TabStop = false;
             this.tf_renewstudent_outdate.UseSystemPasswordChar = false;
+            this.tf_renewstudent_outdate.Click += new System.EventHandler(this.tf_renewstudent_outdate_Click);
+            this.tf_renewstudent_outdate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_renewstudent_outdate_KeyDown);
             // 
             // tf_renewstudent_schoolclass
             // 
@@ -784,6 +813,8 @@ namespace MaterialSkinExample
             this.tf_renewstudent_rejoindate.TabIndex = 21;
             this.tf_renewstudent_rejoindate.TabStop = false;
             this.tf_renewstudent_rejoindate.UseSystemPasswordChar = false;
+            this.tf_renewstudent_rejoindate.Click += new System.EventHandler(this.tf_renewstudent_rejoindate_Click);
+            this.tf_renewstudent_rejoindate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_renewstudent_rejoindate_KeyDown);
             // 
             // tf_renewstudent_joindate
             // 
@@ -801,6 +832,8 @@ namespace MaterialSkinExample
             this.tf_renewstudent_joindate.TabIndex = 20;
             this.tf_renewstudent_joindate.TabStop = false;
             this.tf_renewstudent_joindate.UseSystemPasswordChar = false;
+            this.tf_renewstudent_joindate.Click += new System.EventHandler(this.tf_renewstudent_joindate_Click);
+            this.tf_renewstudent_joindate.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_renewstudent_joindate_KeyDown);
             // 
             // tf_renewstudent_phone
             // 
@@ -867,6 +900,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_search.TabIndex = 3;
             this.tf_renewstudent_search.TabStop = false;
             this.tf_renewstudent_search.UseSystemPasswordChar = false;
+            this.tf_renewstudent_search.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_renewstudent_search_KeyDown);
             // 
             // lb_renewstudent_sex
             // 
@@ -987,24 +1021,6 @@ namespace MaterialSkinExample
             this.item3ToolStripMenuItem.Name = "item3ToolStripMenuItem";
             this.item3ToolStripMenuItem.Size = new System.Drawing.Size(170, 30);
             this.item3ToolStripMenuItem.Text = "Item 3";
-            // 
-            // tf_addstudent_joindate
-            // 
-            this.tf_addstudent_joindate.Depth = 0;
-            this.tf_addstudent_joindate.Hint = "입학일자";
-            this.tf_addstudent_joindate.Location = new System.Drawing.Point(421, 8);
-            this.tf_addstudent_joindate.MaxLength = 32767;
-            this.tf_addstudent_joindate.MouseState = MaterialSkin.MouseState.HOVER;
-            this.tf_addstudent_joindate.Name = "tf_addstudent_joindate";
-            this.tf_addstudent_joindate.PasswordChar = '\0';
-            this.tf_addstudent_joindate.SelectedText = "";
-            this.tf_addstudent_joindate.SelectionLength = 0;
-            this.tf_addstudent_joindate.SelectionStart = 0;
-            this.tf_addstudent_joindate.Size = new System.Drawing.Size(352, 28);
-            this.tf_addstudent_joindate.TabIndex = 15;
-            this.tf_addstudent_joindate.TabStop = false;
-            this.tf_addstudent_joindate.UseSystemPasswordChar = false;
-            this.tf_addstudent_joindate.Click += new System.EventHandler(this.tf_addstudent_joindate_Click);
             // 
             // MainForm
             // 
