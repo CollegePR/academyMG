@@ -14,6 +14,11 @@ def setStudent(request):
     grade = 0
     school_class = ""
     status_of_sign = 1
+    date_of_admission = ""
+    date_of_readdmission = ""
+    date_of_exit = ""
+    birthday = ""
+
     try:
         if request.method == "POST":
             id = request.POST.get('id')
@@ -25,6 +30,10 @@ def setStudent(request):
             grade = request.POST.get('grade')
             school_class = request.POST.get('school_class')
             status_of_sign = request.POST.get('status_of_sign')
+            date_of_admission = request.POST.get('date_of_admission')
+            date_of_readdmission = request.POST.get('date_of_readdmission')
+            date_of_exit = request.POST.get('date_of_exit')
+            birthday = request.POST.get('birthday')
             if id is None:
                 return HttpResponse(json.dumps(data), content_type='application/json')
         else:
@@ -46,6 +55,14 @@ def setStudent(request):
             student.school_class = school_class
         if not status_of_sign is None:
             student.status_of_sign = status_of_sign
+        if not date_of_admission is None:
+            date_of_admission = date_of_admission
+        if not date_of_readdmission is None:
+            date_of_readdmission = date_of_readdmission
+        if not date_of_exit is None:
+            date_of_exit = date_of_exit
+        if not birthday is None:
+            birthday = birthday
 
         student.save()
         data = {'flag': True}
