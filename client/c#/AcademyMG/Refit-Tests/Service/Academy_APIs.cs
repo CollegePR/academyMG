@@ -46,6 +46,23 @@ namespace Refit.Tests
         public int count { get; set; }
         public SearchSubData[] data { get; set; }
     }
+
+    public class AccessListResponse
+    {
+        public bool flag { get; set; }
+        public AccessListSubData[] data { get; set; }
+    }
+
+    public class AttendanceCheckResponse
+    {
+        public bool flag { get; set; }
+    }
+
+    public class AttendanceStatusResponse
+    {
+        public bool flag { get; set; }
+        public string data { get; set; }
+    }
     #endregion
 
 
@@ -92,7 +109,7 @@ namespace Refit.Tests
         public string school_name { get; set; }
 
         [AliasAs("school_class")]
-        public string school_class { get; set; }
+        public int school_class { get; set; }
 
         [AliasAs("grade")]
         public int grade { get; set; }
@@ -122,7 +139,7 @@ namespace Refit.Tests
         public string school_name { get; set; }
 
         [AliasAs("school_class")]
-        public string school_class { get; set; }
+        public int school_class { get; set; }
 
         [AliasAs("grade")]
         public int grade { get; set; }
@@ -140,13 +157,28 @@ namespace Refit.Tests
         public string password { get; set; }
 
         [AliasAs("academy_class")]
-        public string academy_class { get; set; }
+        public int academy_class { get; set; }
 
         [AliasAs("name")]
         public string name { get; set; }
 
         [AliasAs("status")]
         public int status { get; set; }
+    }
+
+    public class AttendanceCheckData
+    {
+        [AliasAs("id")]
+        public int id { get; set; }
+
+        [AliasAs("check")]
+        public bool check { get; set; }
+    }
+
+    public class AttendanceStatusData
+    {
+        [AliasAs("id")]
+        public int id { get; set; }
     }
     #endregion
 
@@ -159,7 +191,28 @@ namespace Refit.Tests
 
     public class SearchSubData
     {
+        public int id { get; set; }
+        public string image { get; set; }
+        public string name { get; set; }
+        public bool sex { get; set; }
+        public string phone_num { get; set; }
+        public string address { get; set; }
+        public string school_name { get; set; }
+        public int school_class { get; set; }
+        public int grade { get; set; }
+        public int status_of_sign { get; set; }
+        public string date_of_admission { get; set; }
+        public string date_of_readdmission { get; set; }
+        public string date_of_exit { get; set; }
+        public string birthday { get; set; }
+        public int academy_class { get; set; }
+    }
 
+    public class AccessListSubData
+    {
+        public string name { get; set; }
+        public string id { get; set; }
+        public int academy_class { get; set; }
     }
     #endregion
 
@@ -194,5 +247,17 @@ namespace Refit.Tests
         //Search
         [Get("/api/search")]
         Task<SearchResponse> Search(string search_query);
+
+        //AccessList
+        [Get("/api/accesslist")]
+        Task<AccessListResponse> AccessList();
+
+        //AttendanceCheck
+        [Post("/api/attendancecheck")]
+        Task<AttendanceCheckResponse> AttendanceCheck([Body(BodySerializationMethod.UrlEncoded)] AttendanceCheckData acdata);
+
+        //AttendanceStatus
+        [Post("/api/attendancestatus")]
+        Task<AttendanceStatusResponse> AttendanceStatus([Body(BodySerializationMethod.UrlEncoded)] AttendanceStatusData asdata);
     }
 }
