@@ -27,6 +27,7 @@ namespace MaterialSkinExample.LoginRegister
 {
     public partial class SelectClassForm : MaterialForm
     {
+        RegisterForm registerForm = null;
         MaterialSingleLineTextField tf = null;
 
         public SelectClassForm()
@@ -36,6 +37,17 @@ namespace MaterialSkinExample.LoginRegister
 
         public SelectClassForm(MaterialSingleLineTextField tf) : this()
         {
+            this.tf = tf;
+        }
+
+        public SelectClassForm(RegisterForm registerForm) : this()
+        {
+            this.registerForm = registerForm;
+        }
+
+        public SelectClassForm(RegisterForm registerForm, MaterialSingleLineTextField tf) : this()
+        {
+            this.registerForm = registerForm;
             this.tf = tf;
         }
 
@@ -51,7 +63,7 @@ namespace MaterialSkinExample.LoginRegister
                 JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
             };
             var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
-            var result = await service.ClassList();
+            var result = await service.GetClassList();
 
             if (result.flag)
             {
@@ -70,12 +82,22 @@ namespace MaterialSkinExample.LoginRegister
             }
         }
 
-        private void materialRaisedButton1_Click(object sender, EventArgs e)
+        private async void materialRaisedButton1_Click(object sender, EventArgs e)
         {
             if (materialListView1.SelectedItems.Count > 0)
             {
-                tf.Text = materialListView1.SelectedItems[0].Text;
-                this.Close();
+                var settings = new RefitSettings
+                {
+                    JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
+                };
+                var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
+                var result = await service.GetClassName(Int32.Parse(materialListView1.SelectedItems[0].Text));
+                if (result.flag)
+                {
+                    if (registerForm != null) registerForm.class_id = Int32.Parse(materialListView1.SelectedItems[0].Text);
+                    if (tf != null) tf.Text = result.data.name;
+                    this.Close();
+                }
             }
         }
     }

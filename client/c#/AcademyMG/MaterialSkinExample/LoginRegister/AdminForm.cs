@@ -41,12 +41,13 @@ namespace MaterialSkinExample.LoginRegister
                 JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
             };
             var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
-            var result = await service.AccessList();
+            var result = await service.GetAccessList();
 
             if (result.flag)
             {
                 foreach(AccessListSubData access_list_data in result.data){
-                    var data = new[] { access_list_data.id, access_list_data.name, access_list_data.academy_class.ToString() };
+                    var result2 = await service.GetClassName(access_list_data.academy_class);
+                    var data = new[] { access_list_data.id, access_list_data.name, result2.data.name };
                     var item = new ListViewItem(data);
                     materialListView1.Items.Add(item);
                 }
@@ -73,7 +74,7 @@ namespace MaterialSkinExample.LoginRegister
                     id = materialListView1.SelectedItems[0].Text,
                     status = 2
                 };
-                var result = await service.AdmissionStatus(admission_data);
+                var result = await service.GetAdmissionStatus(admission_data);
 
                 if (result.flag) materialListView1.Items.Remove(materialListView1.SelectedItems[0]);
             }

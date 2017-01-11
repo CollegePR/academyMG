@@ -74,8 +74,13 @@ namespace Refit.Tests
         public bool flag { get; set; }
         public ClassListSubData[] data { get; set; }
     }
-    #endregion
 
+    public class GetClassNameResponse
+    {
+        public bool flag { get; set; }
+        public GetClassNameSubData data { get; set; }
+    }
+    #endregion
 
     #region SendData
     public class LoginData
@@ -240,8 +245,13 @@ namespace Refit.Tests
         public string name { get; set; }
         public int id { get; set; }
     }
-    #endregion
 
+    public class GetClassNameSubData
+    {
+        public string name { get; set; }
+        public int id { get; set; }
+    }
+    #endregion
 
     [Headers("User-Agent: AcademyMG APIs Tests")]
     public interface AcademyMG_APIs
@@ -272,7 +282,7 @@ namespace Refit.Tests
 
         //Status Admission
         [Post("/api/setteacher")]
-        Task<AdmissionStatusResponse> AdmissionStatus([Body(BodySerializationMethod.UrlEncoded)] AdmissionStatusData data);
+        Task<AdmissionStatusResponse> GetAdmissionStatus([Body(BodySerializationMethod.UrlEncoded)] AdmissionStatusData data);
 
         //Search
         [Get("/api/search")]
@@ -280,17 +290,22 @@ namespace Refit.Tests
 
         //AccessList
         [Get("/api/accesslist")]
-        Task<AccessListResponse> AccessList();
+        Task<AccessListResponse> GetAccessList();
 
         //AttendanceCheck
         [Post("/api/attendancecheck")]
-        Task<AttendanceCheckResponse> AttendanceCheck([Body(BodySerializationMethod.UrlEncoded)] AttendanceCheckData acdata);
+        Task<AttendanceCheckResponse> GetAttendanceCheck([Body(BodySerializationMethod.UrlEncoded)] AttendanceCheckData acdata);
 
         //AttendanceStatus
         [Post("/api/attendancestatus")]
-        Task<AttendanceStatusResponse> AttendanceStatus([Body(BodySerializationMethod.UrlEncoded)] AttendanceStatusData asdata);
+        Task<AttendanceStatusResponse> GetAttendanceStatus([Body(BodySerializationMethod.UrlEncoded)] AttendanceStatusData asdata);
 
+        //ClassList
         [Get("/api/classlist")]
-        Task<ClassListResponse> ClassList();
+        Task<ClassListResponse> GetClassList();
+
+        //ClassName
+        [Get("/api/getclassname")]
+        Task<GetClassNameResponse> GetClassName(int academy_class);
     }
 }

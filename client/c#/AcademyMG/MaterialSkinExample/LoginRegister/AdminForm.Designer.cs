@@ -61,18 +61,18 @@
             // Header_ID
             // 
             this.Header_ID.Text = "ID";
-            this.Header_ID.Width = 120;
+            this.Header_ID.Width = 80;
             // 
             // Header_Name
             // 
             this.Header_Name.Text = "Name";
             this.Header_Name.TextAlign = System.Windows.Forms.HorizontalAlignment.Center;
-            this.Header_Name.Width = 120;
+            this.Header_Name.Width = 80;
             // 
             // Header_Class
             // 
             this.Header_Class.Text = "Class";
-            this.Header_Class.Width = 120;
+            this.Header_Class.Width = 200;
             // 
             // materialRaisedButton1
             // 

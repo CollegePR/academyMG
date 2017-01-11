@@ -33,6 +33,8 @@ namespace MaterialSkinExample.LoginRegister
         public bool name_check_result = false;
         public bool class_check_result = false;
 
+        public int class_id = -1;
+
         public class InputCheck
         {
             public bool flag { get; set; }
@@ -49,12 +51,6 @@ namespace MaterialSkinExample.LoginRegister
 
         }
 
-        private void tf_register_class_Click(object sender, EventArgs e)
-        {
-            SelectClassForm selectclassForm = new SelectClassForm(tf_register_class);
-            selectclassForm.ShowDialog();
-        }
-        
         private void SubmitButton_Click(object sender, EventArgs e)
         {
             if (!id_check_result) materialLabel6.Text = "아이디 중복 오류";
@@ -187,7 +183,7 @@ namespace MaterialSkinExample.LoginRegister
         private void class_check_process()
         {
             class_check_result = false;
-            if (tf_register_class.Text.Length != 0) class_check_result = true;
+            if (tf_register_class.Text.Length != 0 && class_id != -1) class_check_result = true;
         }
 
         private async void register_process()
@@ -207,7 +203,7 @@ namespace MaterialSkinExample.LoginRegister
                 {
                     id = tf_register_id.Text,
                     password = SHA256_Encryptor.SHA256Hash(tf_register_pw.Text),
-                    academy_class = Int32.Parse(tf_register_class.Text),
+                    academy_class = class_id,
                     name = tf_register_name.Text
                 };
 
@@ -217,9 +213,9 @@ namespace MaterialSkinExample.LoginRegister
                 {
                     this.Close();
                 }
-                else materialLabel6.Text = "회원가입 실패[0]";
+                else materialLabel6.Text = "회원가입 실패[REGISTER_ERROR]";
             }
-            else materialLabel6.Text = "회원가입 실패[1]";
+            else materialLabel6.Text = "회원가입 실패[ID_CHECK_ERROR]";
         }
 
         private InputCheck register_id_check(string id)
@@ -260,13 +256,23 @@ namespace MaterialSkinExample.LoginRegister
 
         private void tf_register_class_Enter(object sender, EventArgs e)
         {
-            SelectClassForm selectclassForm = new SelectClassForm(tf_register_class);
-            selectclassForm.ShowDialog();
+            show_class_select_form();
+        }
+
+        private void tf_register_class_Click(object sender, EventArgs e)
+        {
+            show_class_select_form();
         }
 
         private void tf_register_class_Leave(object sender, EventArgs e)
         {
             class_check_process();
+        }
+
+        private void show_class_select_form()
+        {
+            SelectClassForm selectclassForm = new SelectClassForm(this, tf_register_class);
+            selectclassForm.ShowDialog();
         }
     }
 }
