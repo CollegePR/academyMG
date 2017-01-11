@@ -76,15 +76,17 @@
             // 
             // materialRaisedButton1
             // 
+            this.materialRaisedButton1.AutoSize = true;
+            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.materialRaisedButton1.Depth = 0;
             this.materialRaisedButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.materialRaisedButton1.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.materialRaisedButton1.Icon = null;
-            this.materialRaisedButton1.Location = new System.Drawing.Point(0, 341);
+            this.materialRaisedButton1.Location = new System.Drawing.Point(0, 351);
             this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialRaisedButton1.Name = "materialRaisedButton1";
             this.materialRaisedButton1.Primary = true;
-            this.materialRaisedButton1.Size = new System.Drawing.Size(385, 46);
+            this.materialRaisedButton1.Size = new System.Drawing.Size(385, 36);
             this.materialRaisedButton1.TabIndex = 8;
             this.materialRaisedButton1.Text = "승인";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
@@ -99,7 +101,9 @@
             this.Controls.Add(this.materialListView1);
             this.Name = "AdminForm";
             this.Text = "관리자승인대기목록";
+            this.FormClosing += new System.Windows.Forms.FormClosingEventHandler(this.AdminForm_FormClosing);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 

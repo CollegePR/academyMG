@@ -78,5 +78,12 @@ namespace MaterialSkinExample.LoginRegister
                 if (result.flag) materialListView1.Items.Remove(materialListView1.SelectedItems[0]);
             }
         }
+
+        private void AdminForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            LoginForm loginForm = new LoginForm();
+            this.Hide();
+            loginForm.ShowDialog();
+        }
     }
 }

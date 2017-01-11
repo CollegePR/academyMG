@@ -207,7 +207,7 @@ namespace MaterialSkinExample.LoginRegister
                 {
                     id = tf_register_id.Text,
                     password = SHA256_Encryptor.SHA256Hash(tf_register_pw.Text),
-                    academy_class = 1,
+                    academy_class = Int32.Parse(tf_register_class.Text),
                     name = tf_register_name.Text
                 };
 
