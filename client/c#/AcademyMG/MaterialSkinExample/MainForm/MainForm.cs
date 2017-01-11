@@ -23,17 +23,18 @@ using RichardSzalay.MockHttp;
 
 using Refit.Tests;
 
+
 namespace MaterialSkinExample
 {
     public partial class MainForm : MaterialForm
     {
         private bool Addstudent_sex;
-
+        static int key = -1;
         private readonly MaterialSkinManager materialSkinManager;
-        public MainForm()
+        public MainForm(int key_code)
         {
+            key = key_code;
             InitializeComponent();
-
             // Initialize MaterialSkinManager
             materialSkinManager = MaterialSkinManager.Instance;
             materialSkinManager.AddFormToManage(this);
@@ -46,7 +47,7 @@ namespace MaterialSkinExample
         {
 
         }
-        
+
         private void lb_addstudent_sex_Click(object sender, EventArgs e) // 원생 추가
         {
             if (lb_addstudent_sex.Text == "남")
@@ -85,7 +86,7 @@ namespace MaterialSkinExample
                 phone_num = tf_addstudent_phone.Text,
                 address = tf_addstudent_address.Text,
                 school_name = tf_addstudent_schoolname.Text,
-                school_class =  int.Parse(tf_addstudent_schoolclass.Text),
+                school_class = int.Parse(tf_addstudent_schoolclass.Text),
                 grade = int.Parse(tf_addstudent_grade.Text),
                 sos = 1
             };
@@ -101,7 +102,7 @@ namespace MaterialSkinExample
 
         private void tf_addstudent_joindate_Click(object sender, EventArgs e)
         {
-            tf_addstudent_joindate.Text=Util.SelectDate();
+            tf_addstudent_joindate.Text = Util.SelectDate();
         }
 
         private void tf_addstudent_rejoindate_Click(object sender, EventArgs e)
@@ -183,11 +184,10 @@ namespace MaterialSkinExample
         {
             if (e.KeyCode == Keys.Enter)
             {
-                
+
             }
         }
-
-        private async void tf_mainpage_search_KeyDown(object sender, KeyEventArgs e)
+            public async void tf_mainpage_search_KeyDown(object sender, KeyEventArgs e)
         {
             if (e.KeyCode == Keys.Enter)
             {
@@ -204,27 +204,71 @@ namespace MaterialSkinExample
                 {
                     if (result.count == 1)
                     {
-                        lb_mainpage_phone.Text = "전화번호" + result.data[0].phone_num;
-                        lb_mainpage_address.Text = result.data[0].address;
-                        lb_mainpage_school.Text = result.data[0].school_name;
-                        lb_mainpage_grade.Text = result.data[0].grade.ToString();
-                        lb_mainpage_shoolclass.Text = result.data[0].school_class.ToString();
-                        lb_mainpage_join.Text = result.data[0].date_of_admission;
-                        lb_mainpage_rejoindate.Text = result.data[0].date_of_readdmission;
-                        lb_mainpage_outdate.Text = result.data[0].date_of_exit;
+                        lb_mainpage_phone.Text = "전화번호 : " + result.data[0].phone_num;
+                        lb_mainpage_address.Text = "주소 : " + result.data[0].address;
+                        lb_mainpage_school.Text = "학교 : " + result.data[0].school_name;
+                        lb_mainpage_grade.Text = "학년 : " + result.data[0].grade.ToString();
+                        lb_mainpage_shoolclass.Text = "반 : " + result.data[0].school_class.ToString();
+                        lb_mainpage_join.Text = "입학일자 : " + result.data[0].date_of_admission;
+                        lb_mainpage_rejoindate.Text = "재 입학일자 : " + result.data[0].date_of_readdmission;
+                        lb_mainpage_outdate.Text = "퇴소일자 : " + result.data[0].date_of_exit;
+                        lb_mainpage_name.Text = "이름 : " + result.data[0].name;
+                        lb_mainpage_lecture.Text = "수강강좌 : " + result.data[0].academy_class;
+                        lb_mainpage_birthday.Text = "생일 : " + result.data[0].birthday;
                     }
                     else
                     {
-                        //다이얼로그 띄우기
+                        string[] num = new string[10];
+
+
+                        for (int i = 0; i < result.count; i++)
+                        {
+                            num[i] = "이름 : " + result.data[i].name + " 생일 : " + result.data[i].birthday + "학교 : " + result.data[i].school_name;
+
+                        }
+
+
+                        new Form1(num).ShowDialog();
+
+                        if (key != -1)
+                        {
+                            lb_mainpage_phone.Text = "전화번호 : " + result.data[key].phone_num;
+                            lb_mainpage_address.Text = "주소 : " + result.data[key].address;
+                            lb_mainpage_school.Text = "학교 : " + result.data[key].school_name;
+                            lb_mainpage_grade.Text = "학년 : " + result.data[key].grade.ToString();
+                            lb_mainpage_shoolclass.Text = "반 : " + result.data[key].school_class.ToString();
+                            lb_mainpage_join.Text = "입학일자 : " + result.data[key].date_of_admission;
+                            lb_mainpage_rejoindate.Text = "재 입학일자 : " + result.data[key].date_of_readdmission;
+                            lb_mainpage_outdate.Text = "퇴소일자 : " + result.data[key].date_of_exit;
+                            lb_mainpage_name.Text = "이름 : " + result.data[key].name;
+                            lb_mainpage_lecture.Text = "수강강좌 : " + result.data[key].academy_class;
+                            lb_mainpage_birthday.Text = "생일 : " + result.data[key].birthday;
+
+                            key = -1;
+                        }
+
+
                     }
                 }
 
                 else
                 {
-
+                    
                 }
             }
         }
-        
+
+        private async void rb_mainpage_ban_Click(object sender, EventArgs e)
+        {
+            var settings = new RefitSettings
+            {
+                JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
+            };
+
+            var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
+
+
+        }
     }
 }
+

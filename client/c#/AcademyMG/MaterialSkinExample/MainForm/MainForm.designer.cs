@@ -260,6 +260,7 @@ namespace MaterialSkinExample
             this.rb_mainpage_ban.TabIndex = 11;
             this.rb_mainpage_ban.Text = "퇴소처리";
             this.rb_mainpage_ban.UseVisualStyleBackColor = true;
+            this.rb_mainpage_ban.Click += new System.EventHandler(this.rb_mainpage_ban_Click);
             // 
             // tf_mainpage_search
             // 
@@ -290,9 +291,9 @@ namespace MaterialSkinExample
             this.lb_mainpage_shoolclass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_shoolclass.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_shoolclass.Name = "lb_mainpage_shoolclass";
-            this.lb_mainpage_shoolclass.Size = new System.Drawing.Size(45, 19);
+            this.lb_mainpage_shoolclass.Size = new System.Drawing.Size(20, 19);
             this.lb_mainpage_shoolclass.TabIndex = 9;
-            this.lb_mainpage_shoolclass.Text = "class";
+            this.lb_mainpage_shoolclass.Text = "반";
             // 
             // lb_mainpage_grade
             // 
@@ -304,9 +305,9 @@ namespace MaterialSkinExample
             this.lb_mainpage_grade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_grade.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_grade.Name = "lb_mainpage_grade";
-            this.lb_mainpage_grade.Size = new System.Drawing.Size(46, 19);
+            this.lb_mainpage_grade.Size = new System.Drawing.Size(31, 19);
             this.lb_mainpage_grade.TabIndex = 8;
-            this.lb_mainpage_grade.Text = "grade";
+            this.lb_mainpage_grade.Text = "학년";
             // 
             // lb_mainpage_school
             // 
@@ -318,9 +319,9 @@ namespace MaterialSkinExample
             this.lb_mainpage_school.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_school.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_school.Name = "lb_mainpage_school";
-            this.lb_mainpage_school.Size = new System.Drawing.Size(92, 19);
+            this.lb_mainpage_school.Size = new System.Drawing.Size(31, 19);
             this.lb_mainpage_school.TabIndex = 7;
-            this.lb_mainpage_school.Text = "schoolname";
+            this.lb_mainpage_school.Text = "학교";
             // 
             // lb_mainpage_address
             // 
@@ -332,9 +333,9 @@ namespace MaterialSkinExample
             this.lb_mainpage_address.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_address.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_address.Name = "lb_mainpage_address";
-            this.lb_mainpage_address.Size = new System.Drawing.Size(62, 19);
+            this.lb_mainpage_address.Size = new System.Drawing.Size(31, 19);
             this.lb_mainpage_address.TabIndex = 6;
-            this.lb_mainpage_address.Text = "address";
+            this.lb_mainpage_address.Text = "주소";
             // 
             // lb_mainpage_phone
             // 
@@ -346,9 +347,9 @@ namespace MaterialSkinExample
             this.lb_mainpage_phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_phone.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_phone.Name = "lb_mainpage_phone";
-            this.lb_mainpage_phone.Size = new System.Drawing.Size(50, 19);
+            this.lb_mainpage_phone.Size = new System.Drawing.Size(53, 19);
             this.lb_mainpage_phone.TabIndex = 5;
-            this.lb_mainpage_phone.Text = "phone";
+            this.lb_mainpage_phone.Text = "전화번호";
             // 
             // lb_mainpage_name
             // 
@@ -1149,16 +1150,16 @@ namespace MaterialSkinExample
         private MaterialLabel lb_mainpage_join;
         private MaterialRaisedButton rb_mainpage_ban;
         private MaterialSingleLineTextField tf_mainpage_search;
-        private MaterialLabel lb_mainpage_shoolclass;
-        private MaterialLabel lb_mainpage_grade;
-        private MaterialLabel lb_mainpage_school;
-        private MaterialLabel lb_mainpage_address;
-        private MaterialLabel lb_mainpage_phone;
-        private MaterialLabel lb_mainpage_name;
-        private MaterialLabel lb_mainpage_outdate;
-        private MaterialLabel lb_mainpage_rejoindate;
-        private MaterialLabel lb_mainpage_birthday;
-        private MaterialLabel lb_mainpage_lecture;
-        private MaterialSingleLineTextField tf_addstudent_joindate;
+        public MaterialLabel lb_mainpage_shoolclass;
+        public MaterialLabel lb_mainpage_grade;
+        public MaterialLabel lb_mainpage_school;
+        public MaterialLabel lb_mainpage_address;
+        public MaterialLabel lb_mainpage_phone;
+        public MaterialLabel lb_mainpage_name;
+        public MaterialLabel lb_mainpage_outdate;
+        public MaterialLabel lb_mainpage_rejoindate;
+        public MaterialLabel lb_mainpage_birthday;
+        public MaterialLabel lb_mainpage_lecture;
+        public MaterialSingleLineTextField tf_addstudent_joindate;
     }
 }
