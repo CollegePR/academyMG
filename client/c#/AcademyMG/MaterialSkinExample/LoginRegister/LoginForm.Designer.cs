@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.RegisterButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SubmitButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tf_login_pw = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -114,8 +115,8 @@
             this.materialLabel2.BackColor = System.Drawing.SystemColors.Window;
             this.materialLabel2.Depth = 0;
             this.materialLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
-            this.materialLabel2.Font = new System.Drawing.Font("굴림", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.materialLabel2.ForeColor = System.Drawing.Color.Red;
+            this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
             this.materialLabel2.Location = new System.Drawing.Point(33, 175);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
@@ -133,6 +134,7 @@
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.tf_login_pw);
             this.Controls.Add(this.tf_login_id);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "로그인";
             this.Load += new System.EventHandler(this.LoginForm_Load);

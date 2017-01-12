@@ -517,10 +517,10 @@ namespace Refit.Tests
             return (Task<SetTeacherResponse>) methodImpls["SetTeacher"](Client, arguments);
         }
 
-        public virtual Task<AdmissionStatusResponse> AdmissionStatus(AdmissionStatusData data)
+        public virtual Task<AdmissionStatusResponse> GetAdmissionStatus(AdmissionStatusData data)
         {
             var arguments = new object[] { data };
-            return (Task<AdmissionStatusResponse>) methodImpls["AdmissionStatus"](Client, arguments);
+            return (Task<AdmissionStatusResponse>) methodImpls["GetAdmissionStatus"](Client, arguments);
         }
 
         public virtual Task<SearchResponse> Search(string search_query)
@@ -529,28 +529,34 @@ namespace Refit.Tests
             return (Task<SearchResponse>) methodImpls["Search"](Client, arguments);
         }
 
-        public virtual Task<AccessListResponse> AccessList()
+        public virtual Task<AccessListResponse> GetAccessList()
         {
             var arguments = new object[] {  };
-            return (Task<AccessListResponse>) methodImpls["AccessList"](Client, arguments);
+            return (Task<AccessListResponse>) methodImpls["GetAccessList"](Client, arguments);
         }
 
-        public virtual Task<AttendanceCheckResponse> AttendanceCheck(AttendanceCheckData acdata)
+        public virtual Task<AttendanceCheckResponse> GetAttendanceCheck(AttendanceCheckData acdata)
         {
             var arguments = new object[] { acdata };
-            return (Task<AttendanceCheckResponse>) methodImpls["AttendanceCheck"](Client, arguments);
+            return (Task<AttendanceCheckResponse>) methodImpls["GetAttendanceCheck"](Client, arguments);
         }
 
-        public virtual Task<AttendanceStatusResponse> AttendanceStatus(AttendanceStatusData asdata)
+        public virtual Task<AttendanceStatusResponse> GetAttendanceStatus(AttendanceStatusData asdata)
         {
             var arguments = new object[] { asdata };
-            return (Task<AttendanceStatusResponse>) methodImpls["AttendanceStatus"](Client, arguments);
+            return (Task<AttendanceStatusResponse>) methodImpls["GetAttendanceStatus"](Client, arguments);
         }
 
-        public virtual Task<ClassListResponse> ClassList()
+        public virtual Task<ClassListResponse> GetClassList()
         {
             var arguments = new object[] {  };
-            return (Task<ClassListResponse>) methodImpls["ClassList"](Client, arguments);
+            return (Task<ClassListResponse>) methodImpls["GetClassList"](Client, arguments);
+        }
+
+        public virtual Task<GetClassNameResponse> GetClassName(int academy_class)
+        {
+            var arguments = new object[] { academy_class };
+            return (Task<GetClassNameResponse>) methodImpls["GetClassName"](Client, arguments);
         }
 
     }
