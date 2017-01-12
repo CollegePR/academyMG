@@ -100,5 +100,10 @@ namespace MaterialSkinExample.LoginRegister
                 }
             }
         }
+
+        private void materialListView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) materialRaisedButton1.PerformClick();
+        }
     }
 }

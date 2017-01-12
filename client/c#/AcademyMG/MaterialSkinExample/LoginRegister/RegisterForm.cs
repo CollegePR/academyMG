@@ -78,7 +78,8 @@ namespace MaterialSkinExample.LoginRegister
 
         private void tf_register_id_KeyDown(object sender, KeyEventArgs e)
         {
-            id_check_process();
+            if (e.KeyCode == Keys.Enter) SubmitButton.PerformClick();
+            else id_check_process();
         }
 
         private void tf_register_id_KeyUp(object sender, KeyEventArgs e)
@@ -93,7 +94,8 @@ namespace MaterialSkinExample.LoginRegister
 
         private void tf_register_pw_KeyDown(object sender, KeyEventArgs e)
         {
-            pw_check_process();
+            if (e.KeyCode == Keys.Enter) SubmitButton.PerformClick();
+            else pw_check_process();
         }
 
         private void tf_register_pw_KeyUp(object sender, KeyEventArgs e)
@@ -103,7 +105,8 @@ namespace MaterialSkinExample.LoginRegister
 
         private void tf_register_pwcmp_KeyDown(object sender, KeyEventArgs e)
         {
-            pwcmp_check_process();
+            if (e.KeyCode == Keys.Enter) SubmitButton.PerformClick();
+            else pwcmp_check_process();
         }
 
         private void tf_register_pwcmp_KeyUp(object sender, KeyEventArgs e)
@@ -118,7 +121,8 @@ namespace MaterialSkinExample.LoginRegister
         
         private void tf_register_name_KeyDown(object sender, KeyEventArgs e)
         {
-            name_check_process();
+            if (e.KeyCode == Keys.Enter) SubmitButton.PerformClick();
+            else name_check_process();
         }
 
         private void materialRaisedButton1_Click(object sender, EventArgs e)
@@ -273,6 +277,11 @@ namespace MaterialSkinExample.LoginRegister
         {
             SelectClassForm selectclassForm = new SelectClassForm(this, tf_register_class);
             selectclassForm.ShowDialog();
+        }
+
+        private void tf_register_class_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) SubmitButton.PerformClick();
         }
     }
 }

@@ -86,5 +86,10 @@ namespace MaterialSkinExample.LoginRegister
             this.Hide();
             loginForm.ShowDialog();
         }
+
+        private void materialListView1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode == Keys.Enter) materialRaisedButton1.PerformClick();
+        }
     }
 }

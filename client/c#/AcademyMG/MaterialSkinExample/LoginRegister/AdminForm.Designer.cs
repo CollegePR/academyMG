@@ -50,6 +50,7 @@
             this.materialListView1.Location = new System.Drawing.Point(12, 75);
             this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
             this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialListView1.MultiSelect = false;
             this.materialListView1.Name = "materialListView1";
             this.materialListView1.OwnerDraw = true;
             this.materialListView1.Size = new System.Drawing.Size(361, 260);
@@ -57,6 +58,7 @@
             this.materialListView1.TabIndex = 1;
             this.materialListView1.UseCompatibleStateImageBehavior = false;
             this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.materialListView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.materialListView1_KeyDown);
             // 
             // Header_ID
             // 

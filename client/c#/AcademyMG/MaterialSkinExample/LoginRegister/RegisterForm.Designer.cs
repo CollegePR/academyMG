@@ -100,6 +100,7 @@
             this.tf_register_class.UseSystemPasswordChar = false;
             this.tf_register_class.Click += new System.EventHandler(this.tf_register_class_Click);
             this.tf_register_class.Enter += new System.EventHandler(this.tf_register_class_Enter);
+            this.tf_register_class.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_class_KeyDown);
             this.tf_register_class.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tf_register_class_KeyPress);
             this.tf_register_class.Leave += new System.EventHandler(this.tf_register_class_Leave);
             // 
