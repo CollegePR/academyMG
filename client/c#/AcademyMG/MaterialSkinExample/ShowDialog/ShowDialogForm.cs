@@ -14,7 +14,7 @@ namespace MaterialSkinExample.ShowDialog
 {
     public partial class ShowDialogForm : MaterialForm
     {
-        string DefaultTitle = "Test";
+        string DefaultTitle = "";
 
         public ShowDialogForm()
         {

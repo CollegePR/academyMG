@@ -63,8 +63,31 @@ namespace Refit.Tests
         public bool flag { get; set; }
         public string data { get; set; }
     }
-    #endregion
 
+    public class AdmissionStatusResponse
+    {
+        public bool flag { get; set; }
+    }
+
+    public class ClassListResponse
+    {
+        public bool flag { get; set; }
+        public ClassListSubData[] data { get; set; }
+    }
+
+    public class GetClassNameResponse
+    {
+        public bool flag { get; set; }
+        public GetClassNameSubData data { get; set; }
+    }
+
+    public class MyStudentAttendanceResponse
+    {
+        public bool flag { get; set; }
+        public StudentAttendData[] data { get; set; }
+    }
+
+    #endregion
 
     #region SendData
     public class LoginData
@@ -116,6 +139,18 @@ namespace Refit.Tests
 
         [AliasAs("status_of_sign")]
         public int sos { get; set; }
+
+        [AliasAs("date_of_admission")]
+        public string doa { get; set; }
+
+        [AliasAs("date_of_readdmission")]
+        public string dor { get; set; }
+
+        [AliasAs("date_of_exit")]
+        public string doe { get; set; }
+
+        [AliasAs("birthday")]
+        public string birth { get; set; }
     }
 
     public class SetStudentData
@@ -146,6 +181,18 @@ namespace Refit.Tests
 
         [AliasAs("status_of_sign")]
         public int sos { get; set; }
+
+        [AliasAs("date_of_admission")]
+        public string doa { get; set; }
+
+        [AliasAs("date_of_readdmission")]
+        public string dor { get; set; }
+
+        [AliasAs("date_of_exit")]
+        public string doe { get; set; }
+
+        [AliasAs("birthday")]
+        public string birth { get; set; }
     }
 
     public class SetTeacherData
@@ -180,6 +227,22 @@ namespace Refit.Tests
         [AliasAs("id")]
         public int id { get; set; }
     }
+
+    public class AdmissionStatusData
+    {
+        [AliasAs("id")]
+        public string id { get; set; }
+
+        [AliasAs("status")]
+        public int status { get; set; }
+    }
+
+    public class MyStudentData
+    {
+        [AliasAs("requestId")]
+        public string TeacherID { get; set; }
+    }
+
     #endregion
 
     #region SubData
@@ -214,8 +277,27 @@ namespace Refit.Tests
         public string id { get; set; }
         public int academy_class { get; set; }
     }
-    #endregion
 
+    public class ClassListSubData
+    {
+        public string name { get; set; }
+        public int id { get; set; }
+    }
+
+    public class GetClassNameSubData
+    {
+        public string name { get; set; }
+        public int id { get; set; }
+    }
+
+    public class StudentAttendData
+    {
+        public string id { get; set; }
+        public string name { get; set; }
+        public bool check { get; set; }
+    }
+
+    #endregion
 
     [Headers("User-Agent: AcademyMG APIs Tests")]
     public interface AcademyMG_APIs
@@ -244,13 +326,17 @@ namespace Refit.Tests
         [Post("/api/setteacher")]
         Task<SetTeacherResponse> SetTeacher([Body(BodySerializationMethod.UrlEncoded)] SetTeacherData teacher);
 
+        //Status Admission
+        [Post("/api/setteacher")]
+        Task<AdmissionStatusResponse> GetAdmissionStatus([Body(BodySerializationMethod.UrlEncoded)] AdmissionStatusData data);
+
         //Search
         [Get("/api/search")]
         Task<SearchResponse> Search(string search_query);
 
         //AccessList
         [Get("/api/accesslist")]
-        Task<AccessListResponse> AccessList();
+        Task<AccessListResponse> GetAccessList();
 
         //AttendanceCheck
         [Post("/api/attendancecheck")]
@@ -258,7 +344,17 @@ namespace Refit.Tests
 
         //AttendanceStatus
         [Post("/api/attendancestatus")]
-        Task<AttendanceStatusResponse> AttendanceStatus([Body(BodySerializationMethod.UrlEncoded)] AttendanceStatusData asdata);
+        Task<AttendanceStatusResponse> GetAttendanceStatus([Body(BodySerializationMethod.UrlEncoded)] AttendanceStatusData asdata);
+
+        //ClassList
+        [Get("/api/classlist")]
+        Task<ClassListResponse> GetClassList();
+
+        //ClassName
+        [Get("/api/getclassname")]
+        Task<GetClassNameResponse> GetClassName(int academy_class);
+
+        [Post("/api/mystudentattendance")]
+        Task<MyStudentAttendanceResponse> GetMyStudent([Body(BodySerializationMethod.UrlEncoded)] MyStudentData msdata);
     }
 }
-
