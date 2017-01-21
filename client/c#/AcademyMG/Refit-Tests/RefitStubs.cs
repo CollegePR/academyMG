@@ -517,10 +517,58 @@ namespace Refit.Tests
             return (Task<SetTeacherResponse>) methodImpls["SetTeacher"](Client, arguments);
         }
 
+        public virtual Task<AdmissionStatusResponse> GetAdmissionStatus(AdmissionStatusData data)
+        {
+            var arguments = new object[] { data };
+            return (Task<AdmissionStatusResponse>) methodImpls["GetAdmissionStatus"](Client, arguments);
+        }
+
         public virtual Task<SearchResponse> Search(string search_query)
         {
             var arguments = new object[] { search_query };
             return (Task<SearchResponse>) methodImpls["Search"](Client, arguments);
+        }
+
+        public virtual Task<AccessListResponse> GetAccessList()
+        {
+            var arguments = new object[] {  };
+            return (Task<AccessListResponse>) methodImpls["GetAccessList"](Client, arguments);
+        }
+
+        public virtual Task<AttendanceCheckResponse> AttendanceCheck(AttendanceCheckData acdata)
+        {
+            var arguments = new object[] { acdata };
+            return (Task<AttendanceCheckResponse>) methodImpls["AttendanceCheck"](Client, arguments);
+        }
+
+        public virtual Task<AttendanceStatusResponse> GetAttendanceStatus(AttendanceStatusData asdata)
+        {
+            var arguments = new object[] { asdata };
+            return (Task<AttendanceStatusResponse>) methodImpls["GetAttendanceStatus"](Client, arguments);
+        }
+
+        public virtual Task<ClassListResponse> GetClassList()
+        {
+            var arguments = new object[] {  };
+            return (Task<ClassListResponse>) methodImpls["GetClassList"](Client, arguments);
+        }
+
+        public virtual Task<GetClassNameResponse> GetClassName(int academy_class)
+        {
+            var arguments = new object[] { academy_class };
+            return (Task<GetClassNameResponse>) methodImpls["GetClassName"](Client, arguments);
+        }
+
+        public virtual Task<MyStudentAttendanceResponse> GetMyStudent(MyStudentData msdata)
+        {
+            var arguments = new object[] { msdata };
+            return (Task<MyStudentAttendanceResponse>) methodImpls["GetMyStudent"](Client, arguments);
+        }
+
+        public virtual Task<ImageResponse> ImageUpload(Stream image)
+        {
+            var arguments = new object[] { image };
+            return (Task<ImageResponse>) methodImpls["ImageUpload"](Client, arguments);
         }
 
     }

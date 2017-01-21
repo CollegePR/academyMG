@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(LoginForm));
             this.RegisterButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SubmitButton = new MaterialSkin.Controls.MaterialRaisedButton();
             this.tf_login_pw = new MaterialSkin.Controls.MaterialSingleLineTextField();
@@ -41,7 +42,7 @@
             this.RegisterButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.RegisterButton.Depth = 0;
             this.RegisterButton.Icon = null;
-            this.RegisterButton.Location = new System.Drawing.Point(131, 201);
+            this.RegisterButton.Location = new System.Drawing.Point(131, 200);
             this.RegisterButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.RegisterButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.RegisterButton.Name = "RegisterButton";
@@ -58,7 +59,7 @@
             this.SubmitButton.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.SubmitButton.Depth = 0;
             this.SubmitButton.Icon = null;
-            this.SubmitButton.Location = new System.Drawing.Point(33, 201);
+            this.SubmitButton.Location = new System.Drawing.Point(33, 200);
             this.SubmitButton.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.SubmitButton.MouseState = MaterialSkin.MouseState.HOVER;
             this.SubmitButton.Name = "SubmitButton";
@@ -116,7 +117,7 @@
             this.materialLabel2.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.materialLabel2.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel2.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel2.Location = new System.Drawing.Point(33, 180);
+            this.materialLabel2.Location = new System.Drawing.Point(33, 175);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
             this.materialLabel2.Size = new System.Drawing.Size(181, 19);
@@ -127,12 +128,13 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(245, 268);
+            this.ClientSize = new System.Drawing.Size(245, 267);
             this.Controls.Add(this.materialLabel2);
             this.Controls.Add(this.RegisterButton);
             this.Controls.Add(this.SubmitButton);
             this.Controls.Add(this.tf_login_pw);
             this.Controls.Add(this.tf_login_id);
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.Name = "LoginForm";
             this.Text = "로그인";
             this.Load += new System.EventHandler(this.LoginForm_Load);

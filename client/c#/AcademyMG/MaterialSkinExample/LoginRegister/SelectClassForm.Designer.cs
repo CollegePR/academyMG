@@ -28,21 +28,84 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.materialListView1 = new MaterialSkin.Controls.MaterialListView();
+            this.Header_ID = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.Header_CLASS_NAME = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.materialRaisedButton1 = new MaterialSkin.Controls.MaterialRaisedButton();
             this.SuspendLayout();
+            // 
+            // materialListView1
+            // 
+            this.materialListView1.Activation = System.Windows.Forms.ItemActivation.OneClick;
+            this.materialListView1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.materialListView1.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.Header_ID,
+            this.Header_CLASS_NAME});
+            this.materialListView1.Depth = 0;
+            this.materialListView1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
+            this.materialListView1.FullRowSelect = true;
+            this.materialListView1.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
+            this.materialListView1.Location = new System.Drawing.Point(12, 77);
+            this.materialListView1.MouseLocation = new System.Drawing.Point(-1, -1);
+            this.materialListView1.MouseState = MaterialSkin.MouseState.OUT;
+            this.materialListView1.MultiSelect = false;
+            this.materialListView1.Name = "materialListView1";
+            this.materialListView1.OwnerDraw = true;
+            this.materialListView1.Size = new System.Drawing.Size(361, 260);
+            this.materialListView1.Sorting = System.Windows.Forms.SortOrder.Ascending;
+            this.materialListView1.TabIndex = 2;
+            this.materialListView1.UseCompatibleStateImageBehavior = false;
+            this.materialListView1.View = System.Windows.Forms.View.Details;
+            this.materialListView1.KeyDown += new System.Windows.Forms.KeyEventHandler(this.materialListView1_KeyDown);
+            // 
+            // Header_ID
+            // 
+            this.Header_ID.Text = "ID";
+            // 
+            // Header_CLASS_NAME
+            // 
+            this.Header_CLASS_NAME.Text = "CLASS NAME";
+            this.Header_CLASS_NAME.Width = 300;
+            // 
+            // materialRaisedButton1
+            // 
+            this.materialRaisedButton1.AutoSize = true;
+            this.materialRaisedButton1.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
+            this.materialRaisedButton1.Depth = 0;
+            this.materialRaisedButton1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.materialRaisedButton1.Font = new System.Drawing.Font("굴림", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.materialRaisedButton1.Icon = null;
+            this.materialRaisedButton1.Location = new System.Drawing.Point(0, 351);
+            this.materialRaisedButton1.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialRaisedButton1.Name = "materialRaisedButton1";
+            this.materialRaisedButton1.Primary = true;
+            this.materialRaisedButton1.Size = new System.Drawing.Size(385, 36);
+            this.materialRaisedButton1.TabIndex = 3;
+            this.materialRaisedButton1.Text = "선택";
+            this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // SelectClassForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(282, 253);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.ClientSize = new System.Drawing.Size(385, 387);
+            this.Controls.Add(this.materialRaisedButton1);
+            this.Controls.Add(this.materialListView1);
+            this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.Name = "SelectClassForm";
-            this.Text = "SelectClassForm";
+            this.Text = "학급목록";
             this.Load += new System.EventHandler(this.SelectClassForm_Load);
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
         #endregion
+
+        private MaterialSkin.Controls.MaterialListView materialListView1;
+        private System.Windows.Forms.ColumnHeader Header_CLASS_NAME;
+        private MaterialSkin.Controls.MaterialRaisedButton materialRaisedButton1;
+        private System.Windows.Forms.ColumnHeader Header_ID;
     }
 }

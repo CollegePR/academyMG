@@ -38,7 +38,7 @@
             this.lb_showdialog_text.Depth = 0;
             this.lb_showdialog_text.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_showdialog_text.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_showdialog_text.Location = new System.Drawing.Point(100, 141);
+            this.lb_showdialog_text.Location = new System.Drawing.Point(12, 149);
             this.lb_showdialog_text.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_showdialog_text.Name = "lb_showdialog_text";
             this.lb_showdialog_text.Size = new System.Drawing.Size(64, 24);

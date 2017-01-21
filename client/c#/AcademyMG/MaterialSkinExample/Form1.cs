@@ -38,75 +38,62 @@ namespace MaterialSkinExample
 {
     public partial class Form1 : MaterialForm
     {
-
-        private readonly MaterialSkinManager materialSkinManager;
-        public Form1(string[] num)
+        static string key;
+        static int id;
+        public Form1(string num)
         {
             InitializeComponent();
 
-            materialSkinManager = MaterialSkinManager.Instance;
-            materialSkinManager.AddFormToManage(this);
-            materialSkinManager.Theme = MaterialSkinManager.Themes.LIGHT;
-            materialSkinManager.ColorScheme = new ColorScheme(Primary.BlueGrey800, Primary.BlueGrey900, Primary.BlueGrey500, Accent.LightBlue200, TextShade.WHITE);
-            
-            
-            if (num[0] != null)
-                materialLabel1.Text = num[0];
+            key = num;
 
-            if (num[1] != null)
-                materialLabel2.Text = num[1];
+            InitializeListView();
 
-            if (num[2] != null)
-                materialLabel3.Text = num[2];
-
-            if (num[3] != null)
-                materialLabel4.Text = num[3];
-
-            if (num[4] != null)
-                materialLabel5.Text = num[4];
-
-            if (num[5] != null)
-                materialLabel6.Text = num[5];
-
-            if (num[6] != null)
-                materialLabel7.Text = num[6];
         }
 
-        private void materialLabel1_Click(object sender, EventArgs e)
+        private async void InitializeListView()
         {
-            new MainForm(0);
-            this.Close();
+            var settings = new RefitSettings
+            {
+                JsonSerializerSettings = new JsonSerializerSettings() { ContractResolver = new SnakeCasePropertyNamesContractResolver() }
+            };
+            var service = RestService.For<AcademyMG_APIs>("http://127.0.0.1:5013", settings);
+
+            var result = await service.Search(key);
+
+            if (result.flag)
+            {
+                foreach (SearchSubData searchsubData in result.data)
+                {
+                    var result2 = await service.Search(key);
+                    var data = new[] { Convert.ToString(searchsubData.id), searchsubData.name,
+                        Convert.ToString(searchsubData.academy_class), searchsubData.phone_num,
+                        searchsubData.address,searchsubData.school_name, Convert.ToString(searchsubData.grade),
+                        Convert.ToString(searchsubData.school_class), searchsubData.date_of_admission,
+                        searchsubData.date_of_readdmission, searchsubData.date_of_exit, searchsubData.birthday};
+
+                    var item = new ListViewItem(data);
+                    materialListView1.Items.Add(item);
+                }
+            }
+            else
+            {
+                var data = new[] { "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL", "NULL" };
+                var item = new ListViewItem(data);
+                materialListView1.Items.Add(item);
+            }
         }
 
-        private void materialLabel2_Click(object sender, EventArgs e)
+        private void materialRaisedButton1_Click(object sender, EventArgs e)
         {
-            new MainForm(1);
-            this.Close();
-        }
-        private void materialLabel3_Click(object sender, EventArgs e)
-        {
-            new MainForm(2);
-            this.Close();
-        }
-        private void materialLabel4_Click(object sender, EventArgs e)
-        {
-            new MainForm(3);
-            this.Close();
-        }
-        private void materialLabel5_Click(object sender, EventArgs e)
-        {
-            new MainForm(4);
-            this.Close();
-        }
-        private void materialLabel6_Click(object sender, EventArgs e)
-        {
-            new MainForm(5);
-            this.Close();
-        }
-        private void materialLabel7_Click(object sender, EventArgs e)
-        {
-            new MainForm(6);
-            this.Close();
+            if (materialListView1.SelectedItems.Count > 0)
+            {
+
+                id = int.Parse(materialListView1.SelectedItems[0].Text);
+
+                MainForm mainform = new MainForm(id);
+                this.Hide();
+                //mainform.ShowDialog();
+            }
         }
     }
 }

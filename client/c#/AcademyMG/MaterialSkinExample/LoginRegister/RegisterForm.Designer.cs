@@ -40,6 +40,7 @@
             this.materialLabel3 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel4 = new MaterialSkin.Controls.MaterialLabel();
             this.materialLabel5 = new MaterialSkin.Controls.MaterialLabel();
+            this.materialLabel6 = new MaterialSkin.Controls.MaterialLabel();
             this.SuspendLayout();
             // 
             // SubmitButton
@@ -74,15 +75,15 @@
             this.tf_register_name.SelectionLength = 0;
             this.tf_register_name.SelectionStart = 0;
             this.tf_register_name.Size = new System.Drawing.Size(260, 23);
-            this.tf_register_name.TabIndex = 10;
+            this.tf_register_name.TabIndex = 7;
             this.tf_register_name.TabStop = false;
             this.tf_register_name.UseSystemPasswordChar = false;
+            this.tf_register_name.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_name_KeyDown);
             // 
             // tf_register_class
             // 
             this.tf_register_class.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.tf_register_class.Depth = 0;
-            this.tf_register_class.Enabled = false;
             this.tf_register_class.Hint = "학급명";
             this.tf_register_class.Location = new System.Drawing.Point(12, 254);
             this.tf_register_class.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -94,10 +95,14 @@
             this.tf_register_class.SelectionLength = 0;
             this.tf_register_class.SelectionStart = 0;
             this.tf_register_class.Size = new System.Drawing.Size(260, 23);
-            this.tf_register_class.TabIndex = 9;
+            this.tf_register_class.TabIndex = 10;
             this.tf_register_class.TabStop = false;
             this.tf_register_class.UseSystemPasswordChar = false;
             this.tf_register_class.Click += new System.EventHandler(this.tf_register_class_Click);
+            this.tf_register_class.Enter += new System.EventHandler(this.tf_register_class_Enter);
+            this.tf_register_class.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_class_KeyDown);
+            this.tf_register_class.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.tf_register_class_KeyPress);
+            this.tf_register_class.Leave += new System.EventHandler(this.tf_register_class_Leave);
             // 
             // tf_register_pwcmp
             // 
@@ -108,14 +113,17 @@
             this.tf_register_pwcmp.MaxLength = 32767;
             this.tf_register_pwcmp.MouseState = MaterialSkin.MouseState.HOVER;
             this.tf_register_pwcmp.Name = "tf_register_pwcmp";
-            this.tf_register_pwcmp.PasswordChar = '\0';
+            this.tf_register_pwcmp.PasswordChar = '*';
             this.tf_register_pwcmp.SelectedText = "";
             this.tf_register_pwcmp.SelectionLength = 0;
             this.tf_register_pwcmp.SelectionStart = 0;
             this.tf_register_pwcmp.Size = new System.Drawing.Size(260, 23);
-            this.tf_register_pwcmp.TabIndex = 8;
+            this.tf_register_pwcmp.TabIndex = 9;
             this.tf_register_pwcmp.TabStop = false;
             this.tf_register_pwcmp.UseSystemPasswordChar = false;
+            this.tf_register_pwcmp.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_pwcmp_KeyDown);
+            this.tf_register_pwcmp.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tf_register_pwcmp_KeyUp);
+            this.tf_register_pwcmp.Leave += new System.EventHandler(this.tf_register_pwcmp_Leave);
             // 
             // tf_register_pw
             // 
@@ -126,14 +134,16 @@
             this.tf_register_pw.MaxLength = 32767;
             this.tf_register_pw.MouseState = MaterialSkin.MouseState.HOVER;
             this.tf_register_pw.Name = "tf_register_pw";
-            this.tf_register_pw.PasswordChar = '\0';
+            this.tf_register_pw.PasswordChar = '*';
             this.tf_register_pw.SelectedText = "";
             this.tf_register_pw.SelectionLength = 0;
             this.tf_register_pw.SelectionStart = 0;
             this.tf_register_pw.Size = new System.Drawing.Size(260, 23);
-            this.tf_register_pw.TabIndex = 7;
+            this.tf_register_pw.TabIndex = 8;
             this.tf_register_pw.TabStop = false;
             this.tf_register_pw.UseSystemPasswordChar = false;
+            this.tf_register_pw.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_pw_KeyDown);
+            this.tf_register_pw.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tf_register_pw_KeyUp);
             // 
             // tf_register_id
             // 
@@ -152,7 +162,9 @@
             this.tf_register_id.TabIndex = 6;
             this.tf_register_id.TabStop = false;
             this.tf_register_id.UseSystemPasswordChar = false;
+            this.tf_register_id.KeyDown += new System.Windows.Forms.KeyEventHandler(this.tf_register_id_KeyDown);
             this.tf_register_id.KeyUp += new System.Windows.Forms.KeyEventHandler(this.tf_register_id_KeyUp);
+            this.tf_register_id.Leave += new System.EventHandler(this.tf_register_id_Leave);
             // 
             // materialRaisedButton1
             // 
@@ -170,6 +182,7 @@
             this.materialRaisedButton1.TabIndex = 12;
             this.materialRaisedButton1.Text = "취소";
             this.materialRaisedButton1.UseVisualStyleBackColor = true;
+            this.materialRaisedButton1.Click += new System.EventHandler(this.materialRaisedButton1_Click);
             // 
             // materialLabel1
             // 
@@ -182,10 +195,9 @@
             this.materialLabel1.Location = new System.Drawing.Point(12, 95);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
-            this.materialLabel1.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.materialLabel1.Size = new System.Drawing.Size(260, 19);
             this.materialLabel1.TabIndex = 13;
-            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialLabel1.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // materialLabel2
             // 
@@ -198,10 +210,9 @@
             this.materialLabel2.Location = new System.Drawing.Point(12, 141);
             this.materialLabel2.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel2.Name = "materialLabel2";
-            this.materialLabel2.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.materialLabel2.Size = new System.Drawing.Size(260, 19);
             this.materialLabel2.TabIndex = 14;
-            this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialLabel2.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // materialLabel3
             // 
@@ -214,10 +225,9 @@
             this.materialLabel3.Location = new System.Drawing.Point(8, 187);
             this.materialLabel3.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel3.Name = "materialLabel3";
-            this.materialLabel3.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.materialLabel3.Size = new System.Drawing.Size(260, 19);
             this.materialLabel3.TabIndex = 15;
-            this.materialLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialLabel3.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // materialLabel4
             // 
@@ -230,10 +240,9 @@
             this.materialLabel4.Location = new System.Drawing.Point(8, 233);
             this.materialLabel4.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel4.Name = "materialLabel4";
-            this.materialLabel4.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.materialLabel4.Size = new System.Drawing.Size(260, 19);
             this.materialLabel4.TabIndex = 16;
-            this.materialLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialLabel4.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // materialLabel5
             // 
@@ -246,16 +255,31 @@
             this.materialLabel5.Location = new System.Drawing.Point(12, 279);
             this.materialLabel5.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel5.Name = "materialLabel5";
-            this.materialLabel5.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
             this.materialLabel5.Size = new System.Drawing.Size(260, 19);
             this.materialLabel5.TabIndex = 17;
-            this.materialLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.materialLabel5.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
+            // materialLabel6
+            // 
+            this.materialLabel6.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.materialLabel6.BackColor = System.Drawing.SystemColors.Window;
+            this.materialLabel6.Depth = 0;
+            this.materialLabel6.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.materialLabel6.Font = new System.Drawing.Font("Roboto", 11F);
+            this.materialLabel6.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
+            this.materialLabel6.Location = new System.Drawing.Point(12, 314);
+            this.materialLabel6.MouseState = MaterialSkin.MouseState.HOVER;
+            this.materialLabel6.Name = "materialLabel6";
+            this.materialLabel6.Size = new System.Drawing.Size(146, 36);
+            this.materialLabel6.TabIndex = 18;
+            this.materialLabel6.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 
             // RegisterForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(284, 361);
+            this.Controls.Add(this.materialLabel6);
             this.Controls.Add(this.materialLabel5);
             this.Controls.Add(this.materialLabel4);
             this.Controls.Add(this.materialLabel3);
@@ -290,5 +314,6 @@
         private MaterialSkin.Controls.MaterialLabel materialLabel3;
         private MaterialSkin.Controls.MaterialLabel materialLabel4;
         private MaterialSkin.Controls.MaterialLabel materialLabel5;
+        private MaterialSkin.Controls.MaterialLabel materialLabel6;
     }
 }

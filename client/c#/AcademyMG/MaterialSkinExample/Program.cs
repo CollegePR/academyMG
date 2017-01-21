@@ -19,7 +19,7 @@ namespace MaterialSkinExample
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MainForm("test"));
+            Application.Run(new LoginForm());
         }
     }
 }

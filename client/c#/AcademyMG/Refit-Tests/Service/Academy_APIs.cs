@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.IO;
 using System.Threading.Tasks;
 using Refit;
 
@@ -17,7 +18,7 @@ namespace Refit.Tests
     {
         public int status { get; set; }
         public bool flag { get; set; }
-        public TeacherSubData teacher { get; set; }
+        public TeacherSubData data { get; set; }
     }
 
     public class RegisterResponse
@@ -61,7 +62,7 @@ namespace Refit.Tests
     public class AttendanceStatusResponse
     {
         public bool flag { get; set; }
-        public string data { get; set; }
+        public StudentAttendStatusData[] data { get; set; }
     }
 
     public class AdmissionStatusResponse
@@ -85,6 +86,11 @@ namespace Refit.Tests
     {
         public bool flag { get; set; }
         public StudentAttendData[] data { get; set; }
+    }
+
+    public class ImageResponse
+    {
+        public bool flag { get; set; }
     }
 
     #endregion
@@ -151,6 +157,9 @@ namespace Refit.Tests
 
         [AliasAs("birthday")]
         public string birth { get; set; }
+
+        [AliasAs("academy_class")]
+        public int academy_class { get; set; }
     }
 
     public class SetStudentData
@@ -193,6 +202,10 @@ namespace Refit.Tests
 
         [AliasAs("birthday")]
         public string birth { get; set; }
+
+        [AliasAs("academy_class")]
+        public int academy_class { get; set; }
+
     }
 
     public class SetTeacherData
@@ -292,9 +305,15 @@ namespace Refit.Tests
 
     public class StudentAttendData
     {
-        public string id { get; set; }
+        public int id { get; set; }
         public string name { get; set; }
         public bool check { get; set; }
+    }
+
+    public class StudentAttendStatusData
+    {
+        public string date { get; set; }
+        public bool isAttend { get; set; }
     }
 
     #endregion
@@ -356,5 +375,9 @@ namespace Refit.Tests
 
         [Post("/api/mystudentattendance")]
         Task<MyStudentAttendanceResponse> GetMyStudent([Body(BodySerializationMethod.UrlEncoded)] MyStudentData msdata);
+
+        [Multipart]
+        [Post("/api/imageupload")]
+        Task<ImageResponse> ImageUpload([AttachmentName("test.png")] Stream image);
     }
 }
