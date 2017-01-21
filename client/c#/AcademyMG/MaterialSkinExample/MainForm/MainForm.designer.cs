@@ -33,6 +33,7 @@ namespace MaterialSkinExample
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainForm));
             this.materialTabSelector1 = new MaterialSkin.Controls.MaterialTabSelector();
             this.Tab = new MaterialSkin.Controls.MaterialTabControl();
             this.mainpage = new System.Windows.Forms.TabPage();
@@ -105,11 +106,11 @@ namespace MaterialSkinExample
             | System.Windows.Forms.AnchorStyles.Right)));
             this.materialTabSelector1.BaseTabControl = this.Tab;
             this.materialTabSelector1.Depth = 0;
-            this.materialTabSelector1.Location = new System.Drawing.Point(0, 64);
+            this.materialTabSelector1.Location = new System.Drawing.Point(0, 59);
             this.materialTabSelector1.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.materialTabSelector1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialTabSelector1.Name = "materialTabSelector1";
-            this.materialTabSelector1.Size = new System.Drawing.Size(625, 48);
+            this.materialTabSelector1.Size = new System.Drawing.Size(729, 44);
             this.materialTabSelector1.TabIndex = 17;
             this.materialTabSelector1.Text = "materialTabSelector1";
             // 
@@ -123,12 +124,12 @@ namespace MaterialSkinExample
             this.Tab.Controls.Add(this.renewstudentpage);
             this.Tab.Controls.Add(this.checkpage);
             this.Tab.Depth = 0;
-            this.Tab.Location = new System.Drawing.Point(14, 111);
+            this.Tab.Location = new System.Drawing.Point(16, 102);
             this.Tab.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.Tab.MouseState = MaterialSkin.MouseState.HOVER;
             this.Tab.Name = "Tab";
             this.Tab.SelectedIndex = 0;
-            this.Tab.Size = new System.Drawing.Size(590, 306);
+            this.Tab.Size = new System.Drawing.Size(688, 282);
             this.Tab.TabIndex = 18;
             this.Tab.SelectedIndexChanged += new System.EventHandler(this.Tab_SelectedIndexChanged);
             // 
@@ -155,17 +156,19 @@ namespace MaterialSkinExample
             this.mainpage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.mainpage.Name = "mainpage";
             this.mainpage.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.mainpage.Size = new System.Drawing.Size(582, 280);
+            this.mainpage.Size = new System.Drawing.Size(680, 256);
             this.mainpage.TabIndex = 0;
             this.mainpage.Text = "메인화면";
             // 
             // pb_mainpage_image
             // 
             this.pb_mainpage_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_mainpage_image.Location = new System.Drawing.Point(5, 7);
+            this.pb_mainpage_image.Image = ((System.Drawing.Image)(resources.GetObject("pb_mainpage_image.Image")));
+            this.pb_mainpage_image.Location = new System.Drawing.Point(6, 6);
             this.pb_mainpage_image.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pb_mainpage_image.Name = "pb_mainpage_image";
-            this.pb_mainpage_image.Size = new System.Drawing.Size(95, 120);
+            this.pb_mainpage_image.Size = new System.Drawing.Size(110, 111);
+            this.pb_mainpage_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_mainpage_image.TabIndex = 17;
             this.pb_mainpage_image.TabStop = false;
             // 
@@ -175,7 +178,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_birthday.Depth = 0;
             this.lb_mainpage_birthday.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_birthday.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_birthday.Location = new System.Drawing.Point(338, 113);
+            this.lb_mainpage_birthday.Location = new System.Drawing.Point(394, 104);
             this.lb_mainpage_birthday.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_birthday.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_birthday.Name = "lb_mainpage_birthday";
@@ -189,7 +192,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_lecture.Depth = 0;
             this.lb_mainpage_lecture.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_lecture.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_lecture.Location = new System.Drawing.Point(338, 92);
+            this.lb_mainpage_lecture.Location = new System.Drawing.Point(394, 85);
             this.lb_mainpage_lecture.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_lecture.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_lecture.Name = "lb_mainpage_lecture";
@@ -203,7 +206,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_outdate.Depth = 0;
             this.lb_mainpage_outdate.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_outdate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_outdate.Location = new System.Drawing.Point(338, 63);
+            this.lb_mainpage_outdate.Location = new System.Drawing.Point(394, 58);
             this.lb_mainpage_outdate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_outdate.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_outdate.Name = "lb_mainpage_outdate";
@@ -217,7 +220,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_rejoindate.Depth = 0;
             this.lb_mainpage_rejoindate.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_rejoindate.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_rejoindate.Location = new System.Drawing.Point(338, 35);
+            this.lb_mainpage_rejoindate.Location = new System.Drawing.Point(394, 32);
             this.lb_mainpage_rejoindate.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_rejoindate.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_rejoindate.Name = "lb_mainpage_rejoindate";
@@ -231,7 +234,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_join.Depth = 0;
             this.lb_mainpage_join.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_join.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_join.Location = new System.Drawing.Point(338, 7);
+            this.lb_mainpage_join.Location = new System.Drawing.Point(394, 6);
             this.lb_mainpage_join.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_join.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_join.Name = "lb_mainpage_join";
@@ -245,7 +248,7 @@ namespace MaterialSkinExample
             this.rb_mainpage_ban.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.rb_mainpage_ban.Depth = 0;
             this.rb_mainpage_ban.Icon = null;
-            this.rb_mainpage_ban.Location = new System.Drawing.Point(481, 233);
+            this.rb_mainpage_ban.Location = new System.Drawing.Point(561, 215);
             this.rb_mainpage_ban.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rb_mainpage_ban.MouseState = MaterialSkin.MouseState.HOVER;
             this.rb_mainpage_ban.Name = "rb_mainpage_ban";
@@ -260,7 +263,7 @@ namespace MaterialSkinExample
             // 
             this.tf_mainpage_search.Depth = 0;
             this.tf_mainpage_search.Hint = "검색";
-            this.tf_mainpage_search.Location = new System.Drawing.Point(19, 246);
+            this.tf_mainpage_search.Location = new System.Drawing.Point(22, 227);
             this.tf_mainpage_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_mainpage_search.MaxLength = 32767;
             this.tf_mainpage_search.MouseState = MaterialSkin.MouseState.HOVER;
@@ -269,7 +272,7 @@ namespace MaterialSkinExample
             this.tf_mainpage_search.SelectedText = "";
             this.tf_mainpage_search.SelectionLength = 0;
             this.tf_mainpage_search.SelectionStart = 0;
-            this.tf_mainpage_search.Size = new System.Drawing.Size(458, 23);
+            this.tf_mainpage_search.Size = new System.Drawing.Size(534, 23);
             this.tf_mainpage_search.TabIndex = 10;
             this.tf_mainpage_search.TabStop = false;
             this.tf_mainpage_search.UseSystemPasswordChar = false;
@@ -281,7 +284,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_shoolclass.Depth = 0;
             this.lb_mainpage_shoolclass.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_shoolclass.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_shoolclass.Location = new System.Drawing.Point(107, 106);
+            this.lb_mainpage_shoolclass.Location = new System.Drawing.Point(125, 98);
             this.lb_mainpage_shoolclass.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_shoolclass.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_shoolclass.Name = "lb_mainpage_shoolclass";
@@ -295,7 +298,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_grade.Depth = 0;
             this.lb_mainpage_grade.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_grade.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_grade.Location = new System.Drawing.Point(108, 80);
+            this.lb_mainpage_grade.Location = new System.Drawing.Point(126, 74);
             this.lb_mainpage_grade.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_grade.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_grade.Name = "lb_mainpage_grade";
@@ -309,7 +312,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_school.Depth = 0;
             this.lb_mainpage_school.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_school.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_school.Location = new System.Drawing.Point(104, 55);
+            this.lb_mainpage_school.Location = new System.Drawing.Point(121, 51);
             this.lb_mainpage_school.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_school.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_school.Name = "lb_mainpage_school";
@@ -323,7 +326,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_address.Depth = 0;
             this.lb_mainpage_address.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_address.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_address.Location = new System.Drawing.Point(105, 35);
+            this.lb_mainpage_address.Location = new System.Drawing.Point(122, 32);
             this.lb_mainpage_address.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_address.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_address.Name = "lb_mainpage_address";
@@ -337,7 +340,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_phone.Depth = 0;
             this.lb_mainpage_phone.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_phone.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_phone.Location = new System.Drawing.Point(105, 7);
+            this.lb_mainpage_phone.Location = new System.Drawing.Point(122, 6);
             this.lb_mainpage_phone.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_phone.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_phone.Name = "lb_mainpage_phone";
@@ -351,7 +354,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_name.Depth = 0;
             this.lb_mainpage_name.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_name.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_name.Location = new System.Drawing.Point(5, 131);
+            this.lb_mainpage_name.Location = new System.Drawing.Point(6, 121);
             this.lb_mainpage_name.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_name.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_name.Name = "lb_mainpage_name";
@@ -366,7 +369,7 @@ namespace MaterialSkinExample
             this.materialLabel1.Depth = 0;
             this.materialLabel1.Font = new System.Drawing.Font("Roboto", 11F);
             this.materialLabel1.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.materialLabel1.Location = new System.Drawing.Point(81, 131);
+            this.materialLabel1.Location = new System.Drawing.Point(94, 121);
             this.materialLabel1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.materialLabel1.MouseState = MaterialSkin.MouseState.HOVER;
             this.materialLabel1.Name = "materialLabel1";
@@ -380,7 +383,7 @@ namespace MaterialSkinExample
             this.lb_mainpage_id.Depth = 0;
             this.lb_mainpage_id.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_mainpage_id.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_mainpage_id.Location = new System.Drawing.Point(5, 159);
+            this.lb_mainpage_id.Location = new System.Drawing.Point(6, 147);
             this.lb_mainpage_id.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_mainpage_id.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_mainpage_id.Name = "lb_mainpage_id";
@@ -410,7 +413,7 @@ namespace MaterialSkinExample
             this.addstudentpage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.addstudentpage.Name = "addstudentpage";
             this.addstudentpage.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.addstudentpage.Size = new System.Drawing.Size(582, 280);
+            this.addstudentpage.Size = new System.Drawing.Size(680, 256);
             this.addstudentpage.TabIndex = 1;
             this.addstudentpage.Text = "원생추가";
             // 
@@ -421,7 +424,7 @@ namespace MaterialSkinExample
             this.lb_addstudent_searchimage.Depth = 0;
             this.lb_addstudent_searchimage.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_addstudent_searchimage.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_addstudent_searchimage.Location = new System.Drawing.Point(4, 8);
+            this.lb_addstudent_searchimage.Location = new System.Drawing.Point(5, 7);
             this.lb_addstudent_searchimage.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_addstudent_searchimage.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_addstudent_searchimage.Name = "lb_addstudent_searchimage";
@@ -434,7 +437,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_joindate.Depth = 0;
             this.tf_addstudent_joindate.Hint = "입학일자";
-            this.tf_addstudent_joindate.Location = new System.Drawing.Point(316, 7);
+            this.tf_addstudent_joindate.Location = new System.Drawing.Point(369, 6);
             this.tf_addstudent_joindate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_joindate.MaxLength = 32767;
             this.tf_addstudent_joindate.MouseState = MaterialSkin.MouseState.HOVER;
@@ -443,7 +446,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_joindate.SelectedText = "";
             this.tf_addstudent_joindate.SelectionLength = 0;
             this.tf_addstudent_joindate.SelectionStart = 0;
-            this.tf_addstudent_joindate.Size = new System.Drawing.Size(264, 23);
+            this.tf_addstudent_joindate.Size = new System.Drawing.Size(308, 23);
             this.tf_addstudent_joindate.TabIndex = 15;
             this.tf_addstudent_joindate.TabStop = false;
             this.tf_addstudent_joindate.UseSystemPasswordChar = false;
@@ -454,7 +457,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_birthday.Depth = 0;
             this.tf_addstudent_birthday.Hint = "생일";
-            this.tf_addstudent_birthday.Location = new System.Drawing.Point(316, 127);
+            this.tf_addstudent_birthday.Location = new System.Drawing.Point(369, 117);
             this.tf_addstudent_birthday.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_birthday.MaxLength = 32767;
             this.tf_addstudent_birthday.MouseState = MaterialSkin.MouseState.HOVER;
@@ -463,7 +466,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_birthday.SelectedText = "";
             this.tf_addstudent_birthday.SelectionLength = 0;
             this.tf_addstudent_birthday.SelectionStart = 0;
-            this.tf_addstudent_birthday.Size = new System.Drawing.Size(264, 23);
+            this.tf_addstudent_birthday.Size = new System.Drawing.Size(308, 23);
             this.tf_addstudent_birthday.TabIndex = 14;
             this.tf_addstudent_birthday.TabStop = false;
             this.tf_addstudent_birthday.UseSystemPasswordChar = false;
@@ -474,7 +477,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_lecture.Depth = 0;
             this.tf_addstudent_lecture.Hint = "강좌";
-            this.tf_addstudent_lecture.Location = new System.Drawing.Point(316, 96);
+            this.tf_addstudent_lecture.Location = new System.Drawing.Point(369, 89);
             this.tf_addstudent_lecture.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_lecture.MaxLength = 32767;
             this.tf_addstudent_lecture.MouseState = MaterialSkin.MouseState.HOVER;
@@ -483,7 +486,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_lecture.SelectedText = "";
             this.tf_addstudent_lecture.SelectionLength = 0;
             this.tf_addstudent_lecture.SelectionStart = 0;
-            this.tf_addstudent_lecture.Size = new System.Drawing.Size(264, 23);
+            this.tf_addstudent_lecture.Size = new System.Drawing.Size(308, 23);
             this.tf_addstudent_lecture.TabIndex = 13;
             this.tf_addstudent_lecture.TabStop = false;
             this.tf_addstudent_lecture.UseSystemPasswordChar = false;
@@ -494,7 +497,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_outdate.Depth = 0;
             this.tf_addstudent_outdate.Hint = "퇴소일자";
-            this.tf_addstudent_outdate.Location = new System.Drawing.Point(316, 66);
+            this.tf_addstudent_outdate.Location = new System.Drawing.Point(369, 61);
             this.tf_addstudent_outdate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_outdate.MaxLength = 32767;
             this.tf_addstudent_outdate.MouseState = MaterialSkin.MouseState.HOVER;
@@ -503,7 +506,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_outdate.SelectedText = "";
             this.tf_addstudent_outdate.SelectionLength = 0;
             this.tf_addstudent_outdate.SelectionStart = 0;
-            this.tf_addstudent_outdate.Size = new System.Drawing.Size(264, 23);
+            this.tf_addstudent_outdate.Size = new System.Drawing.Size(308, 23);
             this.tf_addstudent_outdate.TabIndex = 12;
             this.tf_addstudent_outdate.TabStop = false;
             this.tf_addstudent_outdate.UseSystemPasswordChar = false;
@@ -514,7 +517,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_schoolclass.Depth = 0;
             this.tf_addstudent_schoolclass.Hint = "학교반";
-            this.tf_addstudent_schoolclass.Location = new System.Drawing.Point(109, 127);
+            this.tf_addstudent_schoolclass.Location = new System.Drawing.Point(127, 117);
             this.tf_addstudent_schoolclass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_schoolclass.MaxLength = 32767;
             this.tf_addstudent_schoolclass.MouseState = MaterialSkin.MouseState.HOVER;
@@ -523,7 +526,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_schoolclass.SelectedText = "";
             this.tf_addstudent_schoolclass.SelectionLength = 0;
             this.tf_addstudent_schoolclass.SelectionStart = 0;
-            this.tf_addstudent_schoolclass.Size = new System.Drawing.Size(202, 23);
+            this.tf_addstudent_schoolclass.Size = new System.Drawing.Size(236, 23);
             this.tf_addstudent_schoolclass.TabIndex = 11;
             this.tf_addstudent_schoolclass.TabStop = false;
             this.tf_addstudent_schoolclass.UseSystemPasswordChar = false;
@@ -532,7 +535,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_grade.Depth = 0;
             this.tf_addstudent_grade.Hint = "학년";
-            this.tf_addstudent_grade.Location = new System.Drawing.Point(110, 96);
+            this.tf_addstudent_grade.Location = new System.Drawing.Point(128, 89);
             this.tf_addstudent_grade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_grade.MaxLength = 32767;
             this.tf_addstudent_grade.MouseState = MaterialSkin.MouseState.HOVER;
@@ -541,7 +544,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_grade.SelectedText = "";
             this.tf_addstudent_grade.SelectionLength = 0;
             this.tf_addstudent_grade.SelectionStart = 0;
-            this.tf_addstudent_grade.Size = new System.Drawing.Size(201, 23);
+            this.tf_addstudent_grade.Size = new System.Drawing.Size(234, 23);
             this.tf_addstudent_grade.TabIndex = 10;
             this.tf_addstudent_grade.TabStop = false;
             this.tf_addstudent_grade.UseSystemPasswordChar = false;
@@ -550,7 +553,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_schoolname.Depth = 0;
             this.tf_addstudent_schoolname.Hint = "학교이름";
-            this.tf_addstudent_schoolname.Location = new System.Drawing.Point(110, 66);
+            this.tf_addstudent_schoolname.Location = new System.Drawing.Point(128, 61);
             this.tf_addstudent_schoolname.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_schoolname.MaxLength = 32767;
             this.tf_addstudent_schoolname.MouseState = MaterialSkin.MouseState.HOVER;
@@ -559,7 +562,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_schoolname.SelectedText = "";
             this.tf_addstudent_schoolname.SelectionLength = 0;
             this.tf_addstudent_schoolname.SelectionStart = 0;
-            this.tf_addstudent_schoolname.Size = new System.Drawing.Size(201, 23);
+            this.tf_addstudent_schoolname.Size = new System.Drawing.Size(234, 23);
             this.tf_addstudent_schoolname.TabIndex = 9;
             this.tf_addstudent_schoolname.TabStop = false;
             this.tf_addstudent_schoolname.UseSystemPasswordChar = false;
@@ -568,7 +571,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_address.Depth = 0;
             this.tf_addstudent_address.Hint = "주소";
-            this.tf_addstudent_address.Location = new System.Drawing.Point(109, 36);
+            this.tf_addstudent_address.Location = new System.Drawing.Point(127, 33);
             this.tf_addstudent_address.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_address.MaxLength = 32767;
             this.tf_addstudent_address.MouseState = MaterialSkin.MouseState.HOVER;
@@ -577,7 +580,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_address.SelectedText = "";
             this.tf_addstudent_address.SelectionLength = 0;
             this.tf_addstudent_address.SelectionStart = 0;
-            this.tf_addstudent_address.Size = new System.Drawing.Size(202, 23);
+            this.tf_addstudent_address.Size = new System.Drawing.Size(236, 23);
             this.tf_addstudent_address.TabIndex = 8;
             this.tf_addstudent_address.TabStop = false;
             this.tf_addstudent_address.UseSystemPasswordChar = false;
@@ -586,7 +589,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_rejoindate.Depth = 0;
             this.tf_addstudent_rejoindate.Hint = "재입학일자";
-            this.tf_addstudent_rejoindate.Location = new System.Drawing.Point(315, 36);
+            this.tf_addstudent_rejoindate.Location = new System.Drawing.Point(367, 33);
             this.tf_addstudent_rejoindate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_rejoindate.MaxLength = 32767;
             this.tf_addstudent_rejoindate.MouseState = MaterialSkin.MouseState.HOVER;
@@ -595,7 +598,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_rejoindate.SelectedText = "";
             this.tf_addstudent_rejoindate.SelectionLength = 0;
             this.tf_addstudent_rejoindate.SelectionStart = 0;
-            this.tf_addstudent_rejoindate.Size = new System.Drawing.Size(265, 23);
+            this.tf_addstudent_rejoindate.Size = new System.Drawing.Size(309, 23);
             this.tf_addstudent_rejoindate.TabIndex = 7;
             this.tf_addstudent_rejoindate.TabStop = false;
             this.tf_addstudent_rejoindate.UseSystemPasswordChar = false;
@@ -606,7 +609,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_phone.Depth = 0;
             this.tf_addstudent_phone.Hint = "전화번호";
-            this.tf_addstudent_phone.Location = new System.Drawing.Point(109, 6);
+            this.tf_addstudent_phone.Location = new System.Drawing.Point(127, 6);
             this.tf_addstudent_phone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_phone.MaxLength = 32767;
             this.tf_addstudent_phone.MouseState = MaterialSkin.MouseState.HOVER;
@@ -615,7 +618,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_phone.SelectedText = "";
             this.tf_addstudent_phone.SelectionLength = 0;
             this.tf_addstudent_phone.SelectionStart = 0;
-            this.tf_addstudent_phone.Size = new System.Drawing.Size(202, 23);
+            this.tf_addstudent_phone.Size = new System.Drawing.Size(236, 23);
             this.tf_addstudent_phone.TabIndex = 5;
             this.tf_addstudent_phone.TabStop = false;
             this.tf_addstudent_phone.UseSystemPasswordChar = false;
@@ -624,7 +627,7 @@ namespace MaterialSkinExample
             // 
             this.tf_addstudent_name.Depth = 0;
             this.tf_addstudent_name.Hint = "이름";
-            this.tf_addstudent_name.Location = new System.Drawing.Point(4, 139);
+            this.tf_addstudent_name.Location = new System.Drawing.Point(5, 128);
             this.tf_addstudent_name.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_addstudent_name.MaxLength = 32767;
             this.tf_addstudent_name.MouseState = MaterialSkin.MouseState.HOVER;
@@ -633,7 +636,7 @@ namespace MaterialSkinExample
             this.tf_addstudent_name.SelectedText = "";
             this.tf_addstudent_name.SelectionLength = 0;
             this.tf_addstudent_name.SelectionStart = 0;
-            this.tf_addstudent_name.Size = new System.Drawing.Size(76, 23);
+            this.tf_addstudent_name.Size = new System.Drawing.Size(89, 23);
             this.tf_addstudent_name.TabIndex = 4;
             this.tf_addstudent_name.TabStop = false;
             this.tf_addstudent_name.UseSystemPasswordChar = false;
@@ -644,7 +647,7 @@ namespace MaterialSkinExample
             this.rb_addstudent_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.rb_addstudent_submit.Depth = 0;
             this.rb_addstudent_submit.Icon = null;
-            this.rb_addstudent_submit.Location = new System.Drawing.Point(481, 233);
+            this.rb_addstudent_submit.Location = new System.Drawing.Point(561, 215);
             this.rb_addstudent_submit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rb_addstudent_submit.MouseState = MaterialSkin.MouseState.HOVER;
             this.rb_addstudent_submit.Name = "rb_addstudent_submit";
@@ -663,7 +666,7 @@ namespace MaterialSkinExample
             this.lb_addstudent_sex.Depth = 0;
             this.lb_addstudent_sex.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_addstudent_sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_addstudent_sex.Location = new System.Drawing.Point(84, 139);
+            this.lb_addstudent_sex.Location = new System.Drawing.Point(98, 128);
             this.lb_addstudent_sex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_addstudent_sex.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_addstudent_sex.Name = "lb_addstudent_sex";
@@ -675,10 +678,12 @@ namespace MaterialSkinExample
             // pb_addstudent_image
             // 
             this.pb_addstudent_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_addstudent_image.Location = new System.Drawing.Point(5, 7);
+            this.pb_addstudent_image.Image = ((System.Drawing.Image)(resources.GetObject("pb_addstudent_image.Image")));
+            this.pb_addstudent_image.Location = new System.Drawing.Point(6, 6);
             this.pb_addstudent_image.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pb_addstudent_image.Name = "pb_addstudent_image";
-            this.pb_addstudent_image.Size = new System.Drawing.Size(100, 129);
+            this.pb_addstudent_image.Size = new System.Drawing.Size(116, 119);
+            this.pb_addstudent_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_addstudent_image.TabIndex = 16;
             this.pb_addstudent_image.TabStop = false;
             // 
@@ -704,17 +709,19 @@ namespace MaterialSkinExample
             this.renewstudentpage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.renewstudentpage.Name = "renewstudentpage";
             this.renewstudentpage.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.renewstudentpage.Size = new System.Drawing.Size(582, 280);
+            this.renewstudentpage.Size = new System.Drawing.Size(680, 256);
             this.renewstudentpage.TabIndex = 2;
             this.renewstudentpage.Text = "원생재갱신";
             // 
             // pb_renewstudent_image
             // 
             this.pb_renewstudent_image.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pb_renewstudent_image.Location = new System.Drawing.Point(5, 7);
+            this.pb_renewstudent_image.Image = ((System.Drawing.Image)(resources.GetObject("pb_renewstudent_image.Image")));
+            this.pb_renewstudent_image.Location = new System.Drawing.Point(6, 6);
             this.pb_renewstudent_image.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.pb_renewstudent_image.Name = "pb_renewstudent_image";
-            this.pb_renewstudent_image.Size = new System.Drawing.Size(90, 122);
+            this.pb_renewstudent_image.Size = new System.Drawing.Size(105, 113);
+            this.pb_renewstudent_image.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pb_renewstudent_image.TabIndex = 29;
             this.pb_renewstudent_image.TabStop = false;
             // 
@@ -722,7 +729,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_birthday.Depth = 0;
             this.tf_renewstudent_birthday.Hint = "생일";
-            this.tf_renewstudent_birthday.Location = new System.Drawing.Point(316, 133);
+            this.tf_renewstudent_birthday.Location = new System.Drawing.Point(369, 123);
             this.tf_renewstudent_birthday.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_birthday.MaxLength = 32767;
             this.tf_renewstudent_birthday.MouseState = MaterialSkin.MouseState.HOVER;
@@ -731,7 +738,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_birthday.SelectedText = "";
             this.tf_renewstudent_birthday.SelectionLength = 0;
             this.tf_renewstudent_birthday.SelectionStart = 0;
-            this.tf_renewstudent_birthday.Size = new System.Drawing.Size(264, 23);
+            this.tf_renewstudent_birthday.Size = new System.Drawing.Size(308, 23);
             this.tf_renewstudent_birthday.TabIndex = 28;
             this.tf_renewstudent_birthday.TabStop = false;
             this.tf_renewstudent_birthday.UseSystemPasswordChar = false;
@@ -742,7 +749,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_lecture.Depth = 0;
             this.tf_renewstudent_lecture.Hint = "강좌";
-            this.tf_renewstudent_lecture.Location = new System.Drawing.Point(316, 103);
+            this.tf_renewstudent_lecture.Location = new System.Drawing.Point(369, 95);
             this.tf_renewstudent_lecture.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_lecture.MaxLength = 32767;
             this.tf_renewstudent_lecture.MouseState = MaterialSkin.MouseState.HOVER;
@@ -751,7 +758,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_lecture.SelectedText = "";
             this.tf_renewstudent_lecture.SelectionLength = 0;
             this.tf_renewstudent_lecture.SelectionStart = 0;
-            this.tf_renewstudent_lecture.Size = new System.Drawing.Size(264, 23);
+            this.tf_renewstudent_lecture.Size = new System.Drawing.Size(308, 23);
             this.tf_renewstudent_lecture.TabIndex = 27;
             this.tf_renewstudent_lecture.TabStop = false;
             this.tf_renewstudent_lecture.UseSystemPasswordChar = false;
@@ -762,7 +769,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_outdate.Depth = 0;
             this.tf_renewstudent_outdate.Hint = "퇴소일자";
-            this.tf_renewstudent_outdate.Location = new System.Drawing.Point(316, 73);
+            this.tf_renewstudent_outdate.Location = new System.Drawing.Point(369, 67);
             this.tf_renewstudent_outdate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_outdate.MaxLength = 32767;
             this.tf_renewstudent_outdate.MouseState = MaterialSkin.MouseState.HOVER;
@@ -771,7 +778,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_outdate.SelectedText = "";
             this.tf_renewstudent_outdate.SelectionLength = 0;
             this.tf_renewstudent_outdate.SelectionStart = 0;
-            this.tf_renewstudent_outdate.Size = new System.Drawing.Size(264, 23);
+            this.tf_renewstudent_outdate.Size = new System.Drawing.Size(308, 23);
             this.tf_renewstudent_outdate.TabIndex = 26;
             this.tf_renewstudent_outdate.TabStop = false;
             this.tf_renewstudent_outdate.UseSystemPasswordChar = false;
@@ -782,7 +789,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_schoolclass.Depth = 0;
             this.tf_renewstudent_schoolclass.Hint = "학교반";
-            this.tf_renewstudent_schoolclass.Location = new System.Drawing.Point(109, 133);
+            this.tf_renewstudent_schoolclass.Location = new System.Drawing.Point(127, 123);
             this.tf_renewstudent_schoolclass.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_schoolclass.MaxLength = 32767;
             this.tf_renewstudent_schoolclass.MouseState = MaterialSkin.MouseState.HOVER;
@@ -791,7 +798,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_schoolclass.SelectedText = "";
             this.tf_renewstudent_schoolclass.SelectionLength = 0;
             this.tf_renewstudent_schoolclass.SelectionStart = 0;
-            this.tf_renewstudent_schoolclass.Size = new System.Drawing.Size(202, 23);
+            this.tf_renewstudent_schoolclass.Size = new System.Drawing.Size(236, 23);
             this.tf_renewstudent_schoolclass.TabIndex = 25;
             this.tf_renewstudent_schoolclass.TabStop = false;
             this.tf_renewstudent_schoolclass.UseSystemPasswordChar = false;
@@ -800,7 +807,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_grade.Depth = 0;
             this.tf_renewstudent_grade.Hint = "학년";
-            this.tf_renewstudent_grade.Location = new System.Drawing.Point(110, 103);
+            this.tf_renewstudent_grade.Location = new System.Drawing.Point(128, 95);
             this.tf_renewstudent_grade.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_grade.MaxLength = 32767;
             this.tf_renewstudent_grade.MouseState = MaterialSkin.MouseState.HOVER;
@@ -809,7 +816,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_grade.SelectedText = "";
             this.tf_renewstudent_grade.SelectionLength = 0;
             this.tf_renewstudent_grade.SelectionStart = 0;
-            this.tf_renewstudent_grade.Size = new System.Drawing.Size(201, 23);
+            this.tf_renewstudent_grade.Size = new System.Drawing.Size(234, 23);
             this.tf_renewstudent_grade.TabIndex = 24;
             this.tf_renewstudent_grade.TabStop = false;
             this.tf_renewstudent_grade.UseSystemPasswordChar = false;
@@ -818,7 +825,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_schoolName.Depth = 0;
             this.tf_renewstudent_schoolName.Hint = "학교이름";
-            this.tf_renewstudent_schoolName.Location = new System.Drawing.Point(110, 73);
+            this.tf_renewstudent_schoolName.Location = new System.Drawing.Point(128, 67);
             this.tf_renewstudent_schoolName.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_schoolName.MaxLength = 32767;
             this.tf_renewstudent_schoolName.MouseState = MaterialSkin.MouseState.HOVER;
@@ -827,7 +834,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_schoolName.SelectedText = "";
             this.tf_renewstudent_schoolName.SelectionLength = 0;
             this.tf_renewstudent_schoolName.SelectionStart = 0;
-            this.tf_renewstudent_schoolName.Size = new System.Drawing.Size(201, 23);
+            this.tf_renewstudent_schoolName.Size = new System.Drawing.Size(234, 23);
             this.tf_renewstudent_schoolName.TabIndex = 23;
             this.tf_renewstudent_schoolName.TabStop = false;
             this.tf_renewstudent_schoolName.UseSystemPasswordChar = false;
@@ -836,7 +843,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_address.Depth = 0;
             this.tf_renewstudent_address.Hint = "주소";
-            this.tf_renewstudent_address.Location = new System.Drawing.Point(109, 42);
+            this.tf_renewstudent_address.Location = new System.Drawing.Point(127, 39);
             this.tf_renewstudent_address.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_address.MaxLength = 32767;
             this.tf_renewstudent_address.MouseState = MaterialSkin.MouseState.HOVER;
@@ -845,7 +852,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_address.SelectedText = "";
             this.tf_renewstudent_address.SelectionLength = 0;
             this.tf_renewstudent_address.SelectionStart = 0;
-            this.tf_renewstudent_address.Size = new System.Drawing.Size(202, 23);
+            this.tf_renewstudent_address.Size = new System.Drawing.Size(236, 23);
             this.tf_renewstudent_address.TabIndex = 22;
             this.tf_renewstudent_address.TabStop = false;
             this.tf_renewstudent_address.UseSystemPasswordChar = false;
@@ -854,7 +861,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_rejoindate.Depth = 0;
             this.tf_renewstudent_rejoindate.Hint = "재입학일자";
-            this.tf_renewstudent_rejoindate.Location = new System.Drawing.Point(315, 42);
+            this.tf_renewstudent_rejoindate.Location = new System.Drawing.Point(367, 39);
             this.tf_renewstudent_rejoindate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_rejoindate.MaxLength = 32767;
             this.tf_renewstudent_rejoindate.MouseState = MaterialSkin.MouseState.HOVER;
@@ -863,7 +870,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_rejoindate.SelectedText = "";
             this.tf_renewstudent_rejoindate.SelectionLength = 0;
             this.tf_renewstudent_rejoindate.SelectionStart = 0;
-            this.tf_renewstudent_rejoindate.Size = new System.Drawing.Size(265, 23);
+            this.tf_renewstudent_rejoindate.Size = new System.Drawing.Size(309, 23);
             this.tf_renewstudent_rejoindate.TabIndex = 21;
             this.tf_renewstudent_rejoindate.TabStop = false;
             this.tf_renewstudent_rejoindate.UseSystemPasswordChar = false;
@@ -874,7 +881,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_joindate.Depth = 0;
             this.tf_renewstudent_joindate.Hint = "입학일자";
-            this.tf_renewstudent_joindate.Location = new System.Drawing.Point(315, 13);
+            this.tf_renewstudent_joindate.Location = new System.Drawing.Point(367, 12);
             this.tf_renewstudent_joindate.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_joindate.MaxLength = 32767;
             this.tf_renewstudent_joindate.MouseState = MaterialSkin.MouseState.HOVER;
@@ -883,7 +890,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_joindate.SelectedText = "";
             this.tf_renewstudent_joindate.SelectionLength = 0;
             this.tf_renewstudent_joindate.SelectionStart = 0;
-            this.tf_renewstudent_joindate.Size = new System.Drawing.Size(265, 23);
+            this.tf_renewstudent_joindate.Size = new System.Drawing.Size(309, 23);
             this.tf_renewstudent_joindate.TabIndex = 20;
             this.tf_renewstudent_joindate.TabStop = false;
             this.tf_renewstudent_joindate.UseSystemPasswordChar = false;
@@ -894,7 +901,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_phone.Depth = 0;
             this.tf_renewstudent_phone.Hint = "전화번호";
-            this.tf_renewstudent_phone.Location = new System.Drawing.Point(109, 13);
+            this.tf_renewstudent_phone.Location = new System.Drawing.Point(127, 12);
             this.tf_renewstudent_phone.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_phone.MaxLength = 32767;
             this.tf_renewstudent_phone.MouseState = MaterialSkin.MouseState.HOVER;
@@ -903,7 +910,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_phone.SelectedText = "";
             this.tf_renewstudent_phone.SelectionLength = 0;
             this.tf_renewstudent_phone.SelectionStart = 0;
-            this.tf_renewstudent_phone.Size = new System.Drawing.Size(202, 23);
+            this.tf_renewstudent_phone.Size = new System.Drawing.Size(236, 23);
             this.tf_renewstudent_phone.TabIndex = 19;
             this.tf_renewstudent_phone.TabStop = false;
             this.tf_renewstudent_phone.UseSystemPasswordChar = false;
@@ -912,7 +919,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_name.Depth = 0;
             this.tf_renewstudent_name.Hint = "이름";
-            this.tf_renewstudent_name.Location = new System.Drawing.Point(2, 132);
+            this.tf_renewstudent_name.Location = new System.Drawing.Point(2, 122);
             this.tf_renewstudent_name.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_name.MaxLength = 32767;
             this.tf_renewstudent_name.MouseState = MaterialSkin.MouseState.HOVER;
@@ -921,7 +928,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_name.SelectedText = "";
             this.tf_renewstudent_name.SelectionLength = 0;
             this.tf_renewstudent_name.SelectionStart = 0;
-            this.tf_renewstudent_name.Size = new System.Drawing.Size(68, 23);
+            this.tf_renewstudent_name.Size = new System.Drawing.Size(79, 23);
             this.tf_renewstudent_name.TabIndex = 5;
             this.tf_renewstudent_name.TabStop = false;
             this.tf_renewstudent_name.UseSystemPasswordChar = false;
@@ -932,7 +939,7 @@ namespace MaterialSkinExample
             this.rb_renewstudent_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.rb_renewstudent_submit.Depth = 0;
             this.rb_renewstudent_submit.Icon = null;
-            this.rb_renewstudent_submit.Location = new System.Drawing.Point(467, 233);
+            this.rb_renewstudent_submit.Location = new System.Drawing.Point(545, 215);
             this.rb_renewstudent_submit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rb_renewstudent_submit.MouseState = MaterialSkin.MouseState.HOVER;
             this.rb_renewstudent_submit.Name = "rb_renewstudent_submit";
@@ -947,7 +954,7 @@ namespace MaterialSkinExample
             // 
             this.tf_renewstudent_search.Depth = 0;
             this.tf_renewstudent_search.Hint = "검색";
-            this.tf_renewstudent_search.Location = new System.Drawing.Point(19, 246);
+            this.tf_renewstudent_search.Location = new System.Drawing.Point(22, 227);
             this.tf_renewstudent_search.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.tf_renewstudent_search.MaxLength = 32767;
             this.tf_renewstudent_search.MouseState = MaterialSkin.MouseState.HOVER;
@@ -956,7 +963,7 @@ namespace MaterialSkinExample
             this.tf_renewstudent_search.SelectedText = "";
             this.tf_renewstudent_search.SelectionLength = 0;
             this.tf_renewstudent_search.SelectionStart = 0;
-            this.tf_renewstudent_search.Size = new System.Drawing.Size(444, 23);
+            this.tf_renewstudent_search.Size = new System.Drawing.Size(518, 23);
             this.tf_renewstudent_search.TabIndex = 3;
             this.tf_renewstudent_search.TabStop = false;
             this.tf_renewstudent_search.UseSystemPasswordChar = false;
@@ -969,7 +976,7 @@ namespace MaterialSkinExample
             this.lb_renewstudent_sex.Depth = 0;
             this.lb_renewstudent_sex.Font = new System.Drawing.Font("Roboto", 11F);
             this.lb_renewstudent_sex.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(222)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))), ((int)(((byte)(0)))));
-            this.lb_renewstudent_sex.Location = new System.Drawing.Point(75, 132);
+            this.lb_renewstudent_sex.Location = new System.Drawing.Point(87, 122);
             this.lb_renewstudent_sex.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lb_renewstudent_sex.MouseState = MaterialSkin.MouseState.HOVER;
             this.lb_renewstudent_sex.Name = "lb_renewstudent_sex";
@@ -986,7 +993,7 @@ namespace MaterialSkinExample
             this.checkpage.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.checkpage.Name = "checkpage";
             this.checkpage.Padding = new System.Windows.Forms.Padding(2, 3, 2, 3);
-            this.checkpage.Size = new System.Drawing.Size(582, 280);
+            this.checkpage.Size = new System.Drawing.Size(680, 256);
             this.checkpage.TabIndex = 3;
             this.checkpage.Text = "출석체크";
             this.checkpage.UseVisualStyleBackColor = true;
@@ -1002,13 +1009,13 @@ namespace MaterialSkinExample
             this.lv_attend_list.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F);
             this.lv_attend_list.FullRowSelect = true;
             this.lv_attend_list.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.Nonclickable;
-            this.lv_attend_list.Location = new System.Drawing.Point(4, 6);
+            this.lv_attend_list.Location = new System.Drawing.Point(5, 6);
             this.lv_attend_list.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.lv_attend_list.MouseLocation = new System.Drawing.Point(-1, -1);
             this.lv_attend_list.MouseState = MaterialSkin.MouseState.OUT;
             this.lv_attend_list.Name = "lv_attend_list";
             this.lv_attend_list.OwnerDraw = true;
-            this.lv_attend_list.Size = new System.Drawing.Size(576, 221);
+            this.lv_attend_list.Size = new System.Drawing.Size(672, 204);
             this.lv_attend_list.TabIndex = 1;
             this.lv_attend_list.UseCompatibleStateImageBehavior = false;
             this.lv_attend_list.View = System.Windows.Forms.View.Details;
@@ -1029,7 +1036,7 @@ namespace MaterialSkinExample
             this.rb_attend_submit.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.rb_attend_submit.Depth = 0;
             this.rb_attend_submit.Icon = null;
-            this.rb_attend_submit.Location = new System.Drawing.Point(481, 233);
+            this.rb_attend_submit.Location = new System.Drawing.Point(561, 215);
             this.rb_attend_submit.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
             this.rb_attend_submit.MouseState = MaterialSkin.MouseState.HOVER;
             this.rb_attend_submit.Name = "rb_attend_submit";
@@ -1042,10 +1049,10 @@ namespace MaterialSkinExample
             // 
             // MainForm
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.ClientSize = new System.Drawing.Size(617, 429);
+            this.ClientSize = new System.Drawing.Size(720, 396);
             this.Controls.Add(this.materialTabSelector1);
             this.Controls.Add(this.Tab);
             this.Margin = new System.Windows.Forms.Padding(2, 3, 2, 3);
